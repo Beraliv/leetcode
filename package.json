@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@datastructures-js/priority-queue": "4.1.2"
+  },
+  "devDependencies": {
+    "@datastructures-js/deque": "1.0.4",
+    "@datastructures-js/queue": "4.2.3"
+  }
+}
