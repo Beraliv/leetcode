@@ -56,6 +56,8 @@ var findRedundantConnection = function (edges) {
     let p = parents[v];
 
     while (parents[p] !== p) {
+      // path compression: parent becomes grandparent, if grandparent exists,
+      // otherwise nothing changes (i.e. it's assigned to itself)
       parents[p] = parents[parents[p]];
       p = parents[p];
     }
