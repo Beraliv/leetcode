@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 var findOrder = function (numCourses, prerequisites) {
-  const indegree = Array(numCourses).fill(0);
+  const inDegree = Array(numCourses).fill(0);
   const graph = new Map();
   for (let v = 0; v < numCourses; v++) {
     graph.set(v, []);
@@ -12,13 +12,13 @@ var findOrder = function (numCourses, prerequisites) {
 
   for (const [to, from] of prerequisites) {
     graph.get(from).push(to);
-    indegree[to]++;
+    inDegree[to]++;
   }
 
   const sorted = [];
 
   for (let v = 0; v < numCourses; v++) {
-    if (indegree[v] === 0) {
+    if (inDegree[v] === 0) {
       sorted.push(v);
     }
   }
@@ -28,9 +28,9 @@ var findOrder = function (numCourses, prerequisites) {
     const v = sorted[index];
 
     for (const neighbour of graph.get(v)) {
-      indegree[neighbour]--;
+      inDegree[neighbour]--;
 
-      if (indegree[neighbour] === 0) {
+      if (inDegree[neighbour] === 0) {
         sorted.push(neighbour);
       }
     }
