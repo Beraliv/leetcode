@@ -1,9 +1,7 @@
-export {};
-
 // medium
 // 20m
 
-const getHash = (str: string): string => {
+const getHash = (str) => {
   return [...str].sort().join("");
 };
 
@@ -11,9 +9,9 @@ const getHash = (str: string): string => {
 // N is str.length
 // Best receivable time O(N * S)
 // time - O(N * S * logS)
-function groupAnagrams(strs: string[]): string[][] {
+function groupAnagrams(strs) {
   // 1. Map<number, string[]>
-  const map = new Map<string, string[]>();
+  const map = new Map();
 
   // 2. Iterate over strs
   // O(N * S * logS)
@@ -33,3 +31,5 @@ function groupAnagrams(strs: string[]): string[][] {
   // 4. Return values of map
   return [...map.values()];
 }
+
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
