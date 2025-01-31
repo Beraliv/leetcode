@@ -5,6 +5,15 @@
 - [1. Two Sum](/2025.01/2025.01.29/1-two-sum.js) - HashMap
 - [49. Group Anagrams](/2025.01/2025.01.29/49-group-anagrams.js) - HashMap + Sort
 
+## DFS
+
+- [785. Is Graph Bipartite?](/2025.01/2025.01.30/785-is-graph-bipartite.js) - DFS + colour
+
+## BFS
+
+- [102. Binary Tree Level Order Traversal](/2023.11/2023.11.12/102-binary-tree-level-order-traversal.js) - Queue
+- [2493. Divide Nodes Into the Maximum Number of Groups](/2025.01/2025.01.30/2493-divide-nodes-into-the-maximum-number-of-groups.js) - UnionFind + BFS + levels
+
 ## Topological sort
 
 Kahn's algorithm
