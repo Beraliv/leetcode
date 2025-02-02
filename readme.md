@@ -8,6 +8,7 @@
 ## DFS
 
 - [785. Is Graph Bipartite?](/2025.01/2025.01.30/785-is-graph-bipartite.js) - DFS + colour
+- [827. Making A Large Island](/2023.12/2023.12.24/827-making-a-large-island.js) - HashMap + DFS
 
 ## BFS
 
