@@ -1,10 +1,15 @@
 ## Arrays & Hashing
 
 - [217. Contains Duplicates](/2025.01/2025.01.29/217-contains-duplicates.js) - HashSet
+- [36. Valid Sudoku](/2025.02/2025.02.03/36-valid-sudoku.js) - HashSet
+
 - [242. Valid Anagram](/2025.01/2025.01.29/242-valid-anagram.js) - HashMap
 - [1. Two Sum](/2025.01/2025.01.29/1-two-sum.js) - HashMap
 - [49. Group Anagrams](/2025.01/2025.01.29/49-group-anagrams.js) - HashMap + Sort
 - [1396. Design Underground System](/2025.02/2025.02.02/1396-design-underground-system.js) - HashMap
+
+- [271. Encode and Decode Strings](/2025.02/2025.02.03/271-encode-and-decode-strings.js) - Array + Escaping
+- [238. Product of Array Except Self](/2025.02/2025.02.03/238-product-of-array-except-self.js) - Array + 2 accumulators
 
 ## DFS
 
