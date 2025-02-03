@@ -4,6 +4,7 @@
 - [242. Valid Anagram](/2025.01/2025.01.29/242-valid-anagram.js) - HashMap
 - [1. Two Sum](/2025.01/2025.01.29/1-two-sum.js) - HashMap
 - [49. Group Anagrams](/2025.01/2025.01.29/49-group-anagrams.js) - HashMap + Sort
+- [1396. Design Underground System](/2025.02/2025.02.02/1396-design-underground-system.js) - HashMap
 
 ## DFS
 

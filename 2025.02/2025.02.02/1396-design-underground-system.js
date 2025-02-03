@@ -19,26 +19,13 @@ UndergroundSystem.prototype.getHash = function (startStation, endStation) {
 };
 
 const addToSorted = (elements, element) => {
-  const newElements = Array(elements.length + 1).fill(0);
-  let j = 0;
-  let added = false;
   for (let i = 0; i < elements.length; i++) {
-    if (!added && element <= elements[i]) {
-      added = true;
-      newElements[j++] = element;
+    if (element <= elements[i]) {
+      [elements[i], element] = [element, elements[i]];
     }
-    newElements[j++] = elements[i];
   }
-  if (!added) {
-    newElements[j++] = element;
-  }
-  return newElements;
+  elements.push(element);
 };
-
-// console.log(">>> addToSorted");
-// console.log(addToSorted([10, 12], 14));
-// console.log(addToSorted([10, 12], 8));
-// console.log(addToSorted([10, 12], 11));
 
 /**
  * @param {number} id
@@ -63,8 +50,7 @@ UndergroundSystem.prototype.checkOut = function (id, stationName, t) {
 
   if (this.medianMap.has(hash)) {
     const { elements } = this.medianMap.get(hash);
-    const newElements = addToSorted(elements, time);
-    this.medianMap.set(hash, { elements: newElements });
+    addToSorted(elements, time);
   } else {
     this.medianMap.set(hash, { elements: [time] });
   }
