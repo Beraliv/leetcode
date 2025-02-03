@@ -1,3 +1,23 @@
+// 1. sort array when top() is called
+// addScore: O(1)
+// top: O(N * logN)
+// reset: O(1)
+
+// 2. size k min heap when top() is called
+// addScore: O(1)
+// top: O(N * logK)
+// reset: O(1)
+
+// 3. Balanced Binary Tree
+// addScore: O(log n) insert to binaryTree
+// top: O(k) pre-order travel
+// reset: O(log n) del and maintain the tree
+
+// 4. Quick select when top() is called
+// addScore: O(1)
+// top: avg O(n) worse O(n^2) like quick sort but only partition the top k we want
+// reset: O(1)
+
 var Leaderboard = function () {
   this.indexMap = new Map();
 };
