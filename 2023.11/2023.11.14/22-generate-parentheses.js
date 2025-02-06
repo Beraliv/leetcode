@@ -3,6 +3,9 @@
  * @return {string[]}
  */
 var generateParenthesis = function (n) {
+  // Time: O(4 ^ N / N ^ 1/2)
+  // Space: O(N) - depth of the recursive calls + current length
+
   const combinations = [];
 
   const combine = (opening, closing, current = []) => {
@@ -16,7 +19,8 @@ var generateParenthesis = function (n) {
       current.pop();
     }
 
-    if (closing > 0 && closing > opening) {
+    // opening >= 0, therefore closing > 0
+    if (closing > opening) {
       current.push(")");
       combine(opening, closing - 1, current);
       current.pop();

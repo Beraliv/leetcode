@@ -1,39 +1,40 @@
-const getHoursSpent = (piles, speed) => {
+const getHours = (piles, speed) => {
   let hours = 0;
-
-  for (let i = 0; i < piles.length; i++) {
-    hours += Math.ceil(piles[i] / speed);
+  for (const pile of piles) {
+    hours += Math.ceil(pile / speed);
   }
-
   return hours;
 };
 
 /**
- * 40m x2 solutions
+ * 11min
+ *
  * @param {number[]} piles
  * @param {number} h
  * @return {number}
  */
 var minEatingSpeed = function (piles, h) {
-  let end = Math.max(...piles);
+  // Time: O(N * logN)
+  // Space: O(1)
 
-  if (piles.length === h) {
-    return end;
+  let left = 1,
+    right = 0;
+  for (const pile of piles) {
+    right = Math.max(right, pile);
   }
 
-  let start = 1;
-  while (start < end) {
-    const speed = (start + end) >> 1;
-    const target = getHoursSpent(piles, speed);
+  while (left < right) {
+    const middle = (left + right) >> 1;
 
-    if (target <= h) {
-      end = speed;
+    if (getHours(piles, middle) <= h) {
+      right = middle;
     } else {
-      start = speed + 1;
+      left = middle + 1;
     }
   }
 
-  return start;
+  // overlap at left === right
+  return left;
 };
 
 // a_1 <= k_1 * x

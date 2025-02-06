@@ -19,27 +19,39 @@ var searchMatrix = function (matrix, target) {
     return matrix[row][column];
   };
 
-  const binarySearch = (start, end) => {
-    while (start <= end) {
-      const middle = (start + end) >> 1;
-      const pivot = getElement(middle);
+  let left = 0,
+    right = m * n - 1;
 
-      if (pivot < target) {
-        start = middle + 1;
-      } else if (pivot > target) {
-        end = middle - 1;
-      } else {
-        return middle;
-      }
+  while (left <= right) {
+    const middle = (left + right) >> 1;
+    const pivot = getElement(middle);
+
+    if (pivot < target) {
+      left = middle + 1;
+    } else if (pivot > target) {
+      right = middle - 1;
+    } else {
+      return middle;
     }
+  }
 
-    return -1;
-  };
-
-  return binarySearch(0, m * n - 1) !== -1;
+  return -1;
 };
 
 // index = 11
 // m = 3, n = 4
 // column = 3
 // row = (11 - 3) / 4 = 2
+
+for (let i = 1; i <= 9; i++) {
+  console.log(
+    searchMatrix(
+      [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ],
+      i
+    )
+  );
+}
