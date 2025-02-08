@@ -1,4 +1,6 @@
 /**
+ * 5min
+ *
  * Definition for singly-linked list.
  * class ListNode {
  *     val: number
@@ -10,8 +12,11 @@
  * }
  */
 
-function reverseList(head: ListNode | null): ListNode | null {
-  let prev: ListNode | null = null;
+function reverseList(head) {
+  // Time: O(N)
+  // Space: O(1)
+
+  let prev = null;
   let curr = head;
   while (curr !== null) {
     let next = curr.next;

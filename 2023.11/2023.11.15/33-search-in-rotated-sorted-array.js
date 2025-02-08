@@ -1,26 +1,19 @@
-const getRotation = (nums) => {
-  let start = 0;
-  let end = nums.length - 1;
+function findShift(nums) {
+  let start = 0,
+    end = nums.length - 1;
 
-  while (start < end) {
+  while (start <= end) {
     const middle = (start + end) >> 1;
 
-    // 2 0 1
     if (nums[start] > nums[middle]) {
       end = middle;
-    }
-    // 1 2 0
-    else if (nums[middle] > nums[end]) {
+    } else if (nums[middle] > nums[end]) {
       start = middle + 1;
-    }
-    // 0 1 2
-    else {
+    } else {
       return start;
     }
   }
-
-  return start;
-};
+}
 
 /**
  * 17m
@@ -29,29 +22,34 @@ const getRotation = (nums) => {
  * @return {number}
  */
 var search = function (nums, target) {
-  // 1. rotation
-  const rotation = getRotation(nums);
+  const n = nums.length;
+  // 1. binary search to find the shift
+  const shift = findShift(nums);
 
-  const getRotatedIndex = (index) => (index + rotation) % nums.length;
-  const getElement = (index) => nums[getRotatedIndex(index)];
-
-  // 2. search with rotation
-
-  let start = 0;
-  let end = nums.length - 1;
-
+  // 2. binary search as there is no shift
+  let start = 0,
+    end = nums.length - 1;
   while (start < end) {
     const middle = (start + end) >> 1;
-    const value = getElement(middle);
-
-    if (value > target) {
+    const pivot = nums[(middle + shift) % n];
+    if (pivot > target) {
       end = middle - 1;
-    } else if (value < target) {
+    } else if (pivot < target) {
       start = middle + 1;
     } else {
-      return getRotatedIndex(middle);
+      return (middle + shift) % n;
     }
   }
 
-  return getElement(start) === target ? getRotatedIndex(start) : -1;
+  let shiftedIndex = (start + shift) % n;
+  if (nums[shiftedIndex] === target) {
+    return shiftedIndex;
+  }
+
+  return -1;
 };
+
+console.log(search([1, 3, 5], 3)); // 1
+console.log(search([1], 0)); // -1
+console.log(search([4, 5, 6, 7, 0, 1, 2], 3)); // -1
+console.log(search([4, 5, 6, 7, 0, 1, 2], 0)); // 4

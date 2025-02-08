@@ -11,16 +11,40 @@
  */
 
 function hasCycle(head) {
-  const set = new Set();
+  // Solution 1
+  // Time: O(N)
+  // Space: O(N)
+  // const set = new Set();
 
-  let node = head;
+  // let node = head;
 
-  while (node !== null) {
-    if (set.has(node)) {
+  // while (node !== null) {
+  //   if (set.has(node)) {
+  //     return true;
+  //   }
+  //   set.add(node);
+  //   node = node.next;
+  // }
+
+  // return false;
+
+  // Solution 2: Floyd's Cycle Finding Algorithm
+  // Time: O(N)
+  // Space: O(1)
+
+  if (head === null) {
+    return false;
+  }
+
+  let slow = head;
+  let fast = head;
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
       return true;
     }
-    set.add(node);
-    node = node.next;
   }
 
   return false;

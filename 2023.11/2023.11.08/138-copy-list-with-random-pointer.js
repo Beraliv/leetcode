@@ -1,6 +1,6 @@
 /**
- * // Definition for a Node.
- * function Node(val, next, random) {
+ * // Definition for a _Node.
+ * function _Node(val, next, random) {
  *    this.val = val;
  *    this.next = next;
  *    this.random = random;
@@ -13,58 +13,104 @@
  * @return {Node}
  */
 var copyRandomList = function (head) {
-  // Solution 1. Map<OldNode | null, NewNode | null>, O(N) space
-  //   const map = new Map();
-  //   map.set(null, null);
-  //   let dummy = new Node(-1, null, null);
-  //   let copiedParent = dummy;
-  //   let node = head;
-  //   while (node !== null) {
-  //     const copiedNode = new Node(node.val, null, null);
-  //     map.set(node, copiedNode);
-  //     copiedParent.next = copiedNode;
-  //     node = node.next;
-  //     copiedParent = copiedParent.next;
+  // Solution 1. Create next and then copy random
+  // Time: O(N)
+  // Space: O(N)
+  // if (head === null) {
+  //   return null;
+  // }
+  // const visited = new Map();
+  // let dummy = new _Node(-1);
+  // let parent = dummy;
+  // let node = head;
+  // while (node !== null) {
+  //   const nodeCopy = new _Node(node.val);
+  //   visited.set(node, nodeCopy);
+  //   parent.next = nodeCopy;
+  //   node = node.next;
+  //   parent = parent.next;
+  // }
+  // let copiedNode = dummy.next;
+  // node = head;
+  // while (node !== null) {
+  //   const copiedRandomNode = visited.get(node.random);
+  //   copiedNode.random = copiedRandomNode;
+  //   copiedNode = copiedNode.next;
+  //   node = node.next;
+  // }
+  // return dummy.next;
+
+  // Solution 2. Create next and random in one go
+  // Time: O(N)
+  // Space: O(N)
+
+  // const visited = new Map();
+
+  // const maybeSaveAndGet = (node) => {
+  //   let nodeCopy;
+  //   if (!visited.has(node)) {
+  //     nodeCopy = new _Node(node.val);
+  //     visited.set(node, nodeCopy);
+  //   } else {
+  //     nodeCopy = visited.get(node);
   //   }
-  //   let copiedNode = dummy.next;
-  //   node = head;
-  //   while (node !== null) {
-  //     const copiedRandomNode = map.get(node.random);
-  //     copiedNode.random = copiedRandomNode;
-  //     copiedNode = copiedNode.next;
-  //     node = node.next;
+  //   return nodeCopy;
+  // };
+
+  // let dummy = new _Node();
+  // let parent = dummy;
+  // let curr = head;
+  // while (curr !== null) {
+  //   const currCopy = maybeSaveAndGet(curr);
+  //   parent.next = currCopy;
+  //   parent = parent.next;
+
+  //   if (curr.random !== null) {
+  //     const randomCopy = maybeSaveAndGet(curr.random);
+  //     currCopy.random = randomCopy;
   //   }
-  //   return dummy.next;
-  //   Solution 2. O(1) space
+
+  //   curr = curr.next;
+  // }
+
+  // return dummy.next;
+
+  // Solution 3: Add copies after the original nodes and then untie them
+  // Time: O(N)
+  // Space: O(1)
   if (head === null) {
     return null;
   }
 
-  let pointer = head;
-  while (pointer !== null) {
-    const newNode = new Node(pointer.val, null, null);
-    newNode.next = pointer.next;
-    pointer.next = newNode;
-    pointer = newNode.next;
+  // 1. Add copies next to the original
+  // A => A' => B => B' => ...
+  let curr = head;
+  while (curr !== null) {
+    const currCopy = new _Node(curr.val);
+    currCopy.next = curr.next;
+    curr.next = currCopy;
+    curr = currCopy.next;
   }
 
-  pointer = head;
-
-  while (pointer !== null) {
-    pointer.next.random = pointer.random !== null ? pointer.random.next : null;
-    pointer = pointer.next.next;
+  curr = head;
+  while (curr != null) {
+    let currCopy = curr.next;
+    if (curr.random !== null) {
+      let randomCopy = curr.random.next;
+      currCopy.random = randomCopy;
+    }
+    curr = currCopy.next;
   }
 
-  let oldListPointer = head; // A->B->C
-  let newListPointer = head.next; // A'->B'->C'
+  // 2. Separate originals from copies
+  let oldNode = head;
+  let newNode = head.next;
   let newHead = head.next;
-
-  while (oldListPointer !== null) {
-    oldListPointer.next = oldListPointer.next.next;
-    newListPointer.next =
-      newListPointer.next !== null ? newListPointer.next.next : null;
-    oldListPointer = oldListPointer.next;
-    newListPointer = newListPointer.next;
+  while (oldNode !== null) {
+    oldNode.next = oldNode.next.next;
+    newNode.next = newNode.next !== null ? newNode.next.next : null;
+    oldNode = oldNode.next;
+    newNode = newNode.next;
   }
 
   return newHead;

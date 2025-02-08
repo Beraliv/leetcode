@@ -26,16 +26,16 @@ var searchMatrix = function (matrix, target) {
     const middle = (left + right) >> 1;
     const pivot = getElement(middle);
 
-    if (pivot < target) {
-      left = middle + 1;
-    } else if (pivot > target) {
+    if (pivot > target) {
       right = middle - 1;
+    } else if (pivot < target) {
+      left = middle + 1;
     } else {
-      return middle;
+      return true;
     }
   }
 
-  return -1;
+  return false;
 };
 
 // index = 11

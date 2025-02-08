@@ -12,6 +12,7 @@
 - [1. Two Sum](/2025.01/2025.01.29/1-two-sum.js) - HashMap
 - [49. Group Anagrams](/2025.01/2025.01.29/49-group-anagrams.js) - HashMap + Sort
 - [1396. Design Underground System](/2025.02/2025.02.02/1396-design-underground-system.js) - HashMap
+- [3160. Find the Number of Distinct Colors Among the Balls](/2025.02/2025.02.07/3160-find-the-number-of-distinct-colors-among-the-balls.js) - 2 HashMaps (ball-color and color-ball pairs)
 
 **Arrays**
 
@@ -19,6 +20,7 @@
 - [271. Encode and Decode Strings](/2025.02/2025.02.03/271-encode-and-decode-strings.js) - Array + Escaping
 - [238. Product of Array Except Self](/2025.02/2025.02.03/238-product-of-array-except-self.js) - Array + 2 accumulators
 - [1570. Dot Product of Two Sparse Vectors](/2023.11/2023.11.19/1570-dot-product-of-two-sparse-vectors.js) - HashMap, or Array + 2 pointers
+- [287. Find the Duplicate Number](/2025.02/2025.02.07/287-find-the-duplicate-number.js) - Array, or Negative Marking in place, or Floyd's Cycle Finding Algorithm (2 Slow + fast iterations, Second to find an entrance to the cycle)
 
 ## 2 pointers
 
@@ -39,10 +41,26 @@
 
 ## Binary Search
 
-- [704. Binary Search](/2025.02/2025.02.06/704-binary-search.js) - Binary search, or Upper Bound search, or Lower Bound search
-- [74. Search in a 2D Matrix](/2023.11/2023.11.15/74-search-a-2d-matrix.js) - Binary search + index parse into (i, j)
-- [875. Koko Eating Bananas](/2023.11/2023.11.15/875-koko-eating-bananas.js) - Binary search
-- [153. Find Minimum in Rotated Sorted Array](/2023.11/2023.11.15/153-find-minimum-in-rotated-sorted-array.js) - Binary Search
+- [704. Binary Search](/2025.02/2025.02.06/704-binary-search.js) - Binary search (-1, <=, -1/+1, middle/-1), or Upper Bound (0, <, 0/+1, left-1/-1), or Lower Bound (0, <, 0/+1, left/-1)
+- [74. Search in a 2D Matrix](/2023.11/2023.11.15/74-search-a-2d-matrix.js) - Binary search + index parse into (i, j) (-1, <=, -1/+1, middle/-1)
+- [875. Koko Eating Bananas](/2023.11/2023.11.15/875-koko-eating-bananas.js) - Binary search (max, <, 0/+1, left)
+- [153. Find Minimum in Rotated Sorted Array](/2023.11/2023.11.15/153-find-minimum-in-rotated-sorted-array.js) - Binary Search (-1, <=, 0/+1, left)
+- [35. Search Insert Position](/2025.02/2025.02.07/35-search-insert-position.js) - Binary Search (-1, <=, -1/+1, middle/left)
+- [33. Search in Rotated Sorted Array](/2023.11/2023.11.15/33-search-in-rotated-sorted-array.js) - 2 Binary searches - shift and value
+- [34. Find First and Last Position of Element in Sorted Array](/2025.02/2025.02.06/34-find-first-and-last-position-of-element-in-sorted-array.js) - 2 Binary searches - left and right bounds
+- [981. Time Based Key-Value Store](/2025.02/2025.02.07/981-time-based-key-value-store.js) - Map + Array + Upper bound
+- [4. Median of Two Sorted Arrays](/2025.02/2025.02.07/4-median-of-two-sorted-arrays.js) - Binary search on smallest array + left/right for 2 array
+
+## LinkedList
+
+- [206. Reverse Linked List](/2025.02/2025.02.07/206-reverse-linked-list.js) - Prev, curr and next pointers
+- [21. Merge Two Sorted Lists](/2023.11/2023.11.07/21-merge-two-sorted-lists.js) - Dummy + merged + point to list
+- [141. Linked List Cycle](/2023.11/2023.11.16/141-linked-list-cycle.js) - HashSet + Iteration, or Floyd's Cycle Finding Algorithm (Slow + fast iteration)
+- [143. Reorder List](/2023.11/2023.11.17/143-reorder-list.js) - Middle (Slow + fast iteration) + Reverse + Merge
+- [19. Remove Nth Node From End of List](/2025.02/2025.02.07/19-remove-nth-node-from-end-of-list.js) - Stack + Iteration, or 2 iterations (length + removal), or 2 pointers for keeping gap of N
+- [138. Copy List with Random Pointer](/2023.11/2023.11.08/138-copy-list-with-random-pointer.js) - HashMap for original/copy + 2 Iterations, or HashMap for original/copy + 1 Iteration, or 1 Iteration with copies next to original and 1 Iteration for separating originals and copies
+- [2. Add Two Numbers](/2025.02/2025.02.07/2-add-two-numbers.js) - 1 Iteration + overflow
+- [146. LRU Cache](/2023.11/2023.11.06/146-lru-cache.js) - Doubly Linked List + HashMap (key-node pairs) + addNode (tail) + remove (based on HashMap)
 
 ## DFS
 
@@ -58,10 +76,11 @@
 
 - [22. Generate Parentheses](/2023.11/2023.11.14/22-generate-parentheses.js) - Backtracking + opening/closing balance
 
-## Priority Queue
+## Heap / Priority Queue
 
-- [295. Find Median from Data Stream](/2025.02/2025.02.05/295-find-median-from-data-stream.js) - MinQueue + MaxQueue
-- [23. Merge k Sorted Lists](/2023.11/2023.11.11/23-merge-k-sorted-lists.js) - MinQueue + first element
+- [295. Find Median from Data Stream](/2025.02/2025.02.05/295-find-median-from-data-stream.js) - MinHeap + MaxHeap
+- [23. Merge k Sorted Lists](/2023.11/2023.11.11/23-merge-k-sorted-lists.js) - MinHeap + first element
+- [373. Find K Pairs with Smallest Sums](/2025.02/2025.02.07/373-find-k-pairs-with-smallest-sums.js) - MinHeap + HashSet for visited + (i, j) => (i + 1, j), (i, j + 1) iteration
 
 ## Topological sort
 

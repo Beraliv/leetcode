@@ -12,6 +12,9 @@
  * @return {ListNode}
  */
 var mergeTwoLists = function (list1, list2) {
+  // Time: O(L1 + L2)
+  // Space: O(1)
+
   let dummy = new ListNode(-1);
 
   let merged = dummy;
