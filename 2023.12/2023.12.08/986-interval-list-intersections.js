@@ -4,6 +4,10 @@
  * @return {number[][]}
  */
 var intervalIntersection = function (firstList, secondList) {
+  // Solution: 2 pointers
+  // Time: O(F + S)
+  // Space: O(F + S)
+
   const intersection = [];
 
   let i = 0;

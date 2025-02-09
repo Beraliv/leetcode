@@ -11,54 +11,54 @@
  * @return {number[][]}
  */
 var verticalOrder = function (root) {
+  // BFS + Queue (left => right)
+  // Time: O(N)
+  // Space: O(N)
+
   if (root === null) {
     return [];
   }
 
-  const map = new Map();
-  let leftMostVerticalOrder = Infinity;
+  const colMap = new Map();
+  let minCol = Infinity;
   const queue = new Queue();
-  queue.enqueue({ node: root, verticalOrder: 0 });
+  queue.enqueue({ node: root, col: 0 });
 
   while (!queue.isEmpty()) {
-    const { node, verticalOrder } = queue.dequeue();
+    const { node, col } = queue.dequeue();
 
-    leftMostVerticalOrder = Math.min(leftMostVerticalOrder, verticalOrder);
+    if (!colMap.has(col)) {
+      colMap.set(col, []);
+    }
+    colMap.get(col).push(node.val);
 
-    const list = map.get(verticalOrder) || [];
-    list.push(node.val);
-    map.set(verticalOrder, list);
+    minCol = Math.min(minCol, col);
+
+    // left to right (within a col), top row to bottom
 
     if (node.left !== null) {
-      queue.enqueue({ node: node.left, verticalOrder: verticalOrder - 1 });
+      queue.enqueue({ node: node.left, col: col - 1 });
     }
 
     if (node.right !== null) {
-      queue.enqueue({ node: node.right, verticalOrder: verticalOrder + 1 });
+      queue.enqueue({ node: node.right, col: col + 1 });
     }
   }
 
   const result = [];
-  for (
-    let index = leftMostVerticalOrder;
-    index < map.size + leftMostVerticalOrder;
-    index++
-  ) {
-    result.push(map.get(index));
+  for (let i = minCol; i < minCol + colMap.size; i++) {
+    result.push(colMap.get(i));
   }
+
   return result;
 };
 
-//   3
-// 9   20
-//   15  7
+//    3
+//  1   2
+//   4 0
 
-// map = {0: [3, 15], -1: [9], 1: [20], 2: [7]}, size = 4
-// leftMostVerticalOrder = -1
-// node = Node(3), verticalOder = 0, list = [3]
-// node = Node(9), verticalOrder = -1, list = [9]
-// node = Node(20), verticalOrder = 1, list = [20]
-// node = Node(15), verticalOrder = 0, list = [3, 15]
-// node = Node(7), verticalOrder = 2, list = [7]
-// result = [[9], [3, 15], [20], [7]]
-// index = 3
+// levelMap = {0: [3, 4, 0], -1: [1], 1: [2]}, minLevel = -1, maxLevel = 1
+// queue = []
+// {node: 0, level: 0}
+// result = [[1], [3, 4, 0], [2]]
+//

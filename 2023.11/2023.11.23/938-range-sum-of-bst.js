@@ -13,6 +13,10 @@
  * @return {number}
  */
 var rangeSumBST = function (root, low, high) {
+  // Solution: DFS + Optimisation for BST
+  // Time: O(N)
+  // Space: O(N) for unbalanced and O(logN) for balanced
+
   let sum = 0;
 
   const dfs = (node) => {

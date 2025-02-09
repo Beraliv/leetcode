@@ -50,6 +50,11 @@ var shortestPathBinaryMatrix = function (grid) {
   //   }
 
   //   return minCount === Infinity ? -1 : minCount;
+  // Solution 1: Queue + Array ([x][y] for visited)
+  // Solution 2: Queue + Grid mutation (-1 for visited)
+  // Time: O(N), where N is a number of cell in a grid
+  // Space: O(N) for queue and visited
+
   const n = grid.length;
 
   if (grid[0][0] === 1 || grid[n - 1][n - 1] === 1) {
@@ -68,7 +73,9 @@ var shortestPathBinaryMatrix = function (grid) {
   ];
   const queue = new Queue();
   queue.enqueue([0, 0, 1]);
-  const visited = new Set([`0.0`]);
+  const visited = Array(n)
+    .fill(0)
+    .map(() => Array(n).fill(false));
 
   while (!queue.isEmpty()) {
     const [x0, y0, count] = queue.dequeue();
@@ -81,13 +88,13 @@ var shortestPathBinaryMatrix = function (grid) {
       const x = x0 + dx;
       const y = y0 + dy;
 
-      if (visited.has(`${x}.${y}`)) continue;
+      if (visited[x][y]) continue;
       if (x < 0 || x >= n) continue;
       if (y < 0 || y >= n) continue;
       if (grid[x][y] !== 0) continue;
 
       queue.enqueue([x, y, count + 1]);
-      visited.add(`${x}.${y}`);
+      visited[x][y] = true;
     }
   }
 

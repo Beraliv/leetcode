@@ -3,43 +3,24 @@
  * @return {string}
  */
 var simplifyPath = function (path) {
-  const folders = [];
-  let current = [];
+  const stack = [];
 
-  const processCurrent = () => {
-    const str = current.join("");
-
-    if (str === ".") {
+  for (const portion of path.split("/")) {
+    // 4. path/../ => /
+    if (portion === "..") {
+      stack.pop();
+      continue;
+    }
+    if (portion === "." || !portion) {
       // 1. ./ => /
-    } else if (str === "..") {
-      // 4. path/../ => /
-      if (folders.length > 0) {
-        folders.pop();
-      }
-    } else {
-      // 0. path/
-      folders.push(str);
+      // 2. // => /
+      continue;
     }
-
-    current.length = 0;
-  };
-
-  for (const ch of path) {
-    // 2. // => /
-    if (ch === "/" && current.length > 0) {
-      processCurrent();
-    } else if (ch !== "/") {
-      current.push(ch);
-    }
-  }
-
-  // no / at the end
-  if (current.length > 0) {
-    processCurrent();
+    stack.push(portion);
   }
 
   // 3. last / is removed
-  return `/${folders.join("/")}`;
+  return `/${stack.join("/")}`;
 };
 
 // ./path//../list/

@@ -3,25 +3,28 @@
  * @return {number[][]}
  */
 var merge = function (intervals) {
-  const sortedIntervals = [...intervals].sort(
-    ([start1], [start2]) => start1 - start2
-  );
+  // Solution: Sort + Merge in Array
+  // Time: O(N * logN)
+  // Space: O(logN)
+
+  intervals.sort((aInterval, bInterval) => aInterval[0] - bInterval[0]);
 
   const answer = [];
-  for (let i = 0; i < sortedIntervals.length; i++) {
+
+  for (const interval of intervals) {
     if (answer.length === 0) {
-      answer.push(sortedIntervals[i]);
+      answer.push(interval);
     } else {
-      if (answer[answer.length - 1][1] >= sortedIntervals[i][0]) {
-        answer[answer.length - 1][1] = Math.max(
-          answer[answer.length - 1][1],
-          sortedIntervals[i][1]
-        );
+      const lastInterval = answer[answer.length - 1];
+
+      if (lastInterval[1] >= interval[0]) {
+        lastInterval[1] = Math.max(lastInterval[1], interval[1]);
       } else {
-        answer.push(sortedIntervals[i]);
+        answer.push(interval);
       }
     }
   }
+
   return answer;
 };
 

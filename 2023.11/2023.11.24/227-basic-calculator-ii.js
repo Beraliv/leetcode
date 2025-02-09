@@ -81,10 +81,9 @@
 // return 23
 
 const isDigit = (ch) => /\d/.test(ch);
+const isOperator = (ch) => ["+", "-", "*", "/"].includes(ch);
 
-const isWhitespace = (ch) => /\s/.test(ch);
-
-const divide = (a, b) => {
+const integerDivide = (a, b) => {
   const result = a / b;
 
   return result > 0 ? Math.floor(result) : Math.ceil(result);
@@ -104,37 +103,36 @@ var calculate = function (s) {
 
   // Solution 2. No stack, O(N) time, O(1) space
 
-  let result = 0;
-  let currentNumber = 0;
-  let lastNumber = 0;
-  let operation = "+";
+  let sum = 0;
+  let previousNumber = 0,
+    currentNumber = 0,
+    operator = "+";
 
-  for (let i = 0; i < s.length; i++) {
+  let i = 0;
+  while (i < s.length) {
     const ch = s[i];
-
     if (isDigit(ch)) {
-      currentNumber = 10 * currentNumber + parseInt(ch);
+      currentNumber = currentNumber * 10 + Number(ch);
     }
-
-    if ((!isDigit(ch) && !isWhitespace(ch)) || i === s.length - 1) {
-      if (operation === "+" || operation === "-") {
-        result += lastNumber;
-        lastNumber = operation === "+" ? currentNumber : -currentNumber;
-      } else if (operation === "*") {
-        lastNumber = lastNumber * currentNumber;
-      } else if (operation === "/") {
-        lastNumber = divide(lastNumber, currentNumber);
+    if (isOperator(ch) || i === s.length - 1) {
+      if (operator === "+" || operator === "-") {
+        sum += previousNumber;
+        previousNumber = operator === "+" ? currentNumber : -currentNumber;
+      } else if (operator === "*") {
+        previousNumber = previousNumber * currentNumber;
+      } else {
+        previousNumber = integerDivide(previousNumber, currentNumber);
       }
-      operation = ch;
+      operator = ch;
       currentNumber = 0;
     }
+    i++;
   }
 
-  result += lastNumber;
-
-  return result;
+  return sum;
 };
 
-// result = 3, currentNumber = 0, lastNumber = 4
-// operation = 2
-// result = 7
+// s = 2+3*4-5/1, s.length = 9
+
+// sum = 9, previousNumber = -5, currentNumber = 0, operator = 1
+// i = 8, ch = 1

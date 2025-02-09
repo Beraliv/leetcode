@@ -17,35 +17,46 @@ function ListNode(val, next) {
  * @return {ListNode}
  */
 var mergeKLists = function (lists) {
-  // Time: O(N * L * logL)
+  // Solution 1: MinHeap
+  // Time: O(N * logL)
   // Space: O(L)
 
-  const queue = new MinPriorityQueue({ priority: (node) => node.val });
+  const minHeap = new MinPriorityQueue({ priority: (node) => node.val });
 
   // O(L * log(N * L))
   for (const list of lists) {
     if (list !== null) {
-      queue.enqueue(list);
+      minHeap.enqueue(list);
     }
   }
 
   const dummy = new ListNode();
   let node = dummy;
 
-  // N * L * log(N * L)
-  while (!queue.isEmpty()) {
-    const list = queue.dequeue().element;
+  // N * logL
+  while (!minHeap.isEmpty()) {
+    const list = minHeap.dequeue().element;
 
     node.next = new ListNode(list.val);
     node = node.next;
 
     if (list.next) {
-      queue.enqueue(list.next);
+      minHeap.enqueue(list.next);
     }
   }
 
   return dummy.next;
+
+  // Solution 2: Merge lists with Divide and Conquer
+  // Time: O(N * logL)
+  // Space: O(1)
+
+  // TODO: to explore
 };
+
+// =======================
+//         TESTING
+// =======================
 
 const buildList = (array) => {
   const dummy = new ListNode();

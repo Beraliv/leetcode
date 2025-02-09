@@ -1,6 +1,5 @@
-const addToSorted = (sorted, element) => {
-  sorted.push(element);
-  sorted.sort((node1, node2) => {
+const sortByDepthThenByValue = (sorted) => {
+  return sorted.sort((node1, node2) => {
     if (node1.depth !== node2.depth) {
       return node1.depth - node2.depth;
     }
@@ -23,6 +22,10 @@ const addToSorted = (sorted, element) => {
  * @return {number[][]}
  */
 var verticalTraversal = function (root) {
+  // Solution: BFS + Local Sort
+  // Time: O(N*log(N / K)), where K is a number of columns in the result
+  // Space: O(N)
+
   if (root === null) {
     return [];
   }
@@ -44,8 +47,7 @@ var verticalTraversal = function (root) {
     maxIndex = Math.max(maxIndex, index);
 
     const array = map.get(index) || [];
-    // sort by depth, then by val
-    addToSorted(array, { node, index, depth });
+    array.push({ node, index, depth });
     map.set(index, array);
 
     if (node.left !== null) {
@@ -57,11 +59,11 @@ var verticalTraversal = function (root) {
     }
   }
 
-  // 4. iterate from minIndex to maxIndex to put the result into answer
+  // 4. iterate from minIndex to maxIndex, sort and put the result into answer
   const answer = [];
 
   for (let i = minIndex; i <= maxIndex; i++) {
-    answer.push(map.get(i).map(({ node }) => node.val));
+    answer.push(sortByDepthThenByValue(map.get(i)).map(({ node }) => node.val));
   }
 
   // 5. return answer;

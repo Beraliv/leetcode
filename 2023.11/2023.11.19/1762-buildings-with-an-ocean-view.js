@@ -9,6 +9,10 @@ const swap = (nums, i, j) => {
  * @return {number[]}
  */
 var findBuildings = function (heights) {
+  // Solution: right to left + Swap in place
+  // Time: O(N)
+  // Space: O(1)
+
   let max = -Infinity;
   const answer = [];
 

@@ -8,10 +8,11 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-  // O(N) space
+  // Solution: HashMap
+  // Time: O(N)
+  // Space: O(N)
   let map = {};
 
-  // O(N) time
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
 

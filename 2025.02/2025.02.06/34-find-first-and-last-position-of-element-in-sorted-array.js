@@ -30,6 +30,10 @@ const binarySearch = (nums, target, bound) => {
  * @return {number[]}
  */
 var searchRange = (nums, target) => {
+  // Solution: 2 Binary searches: for left and right bounds
+  // Time: O(logN)
+  // Space: O(1)
+
   return [
     binarySearch(nums, target, "left"),
     binarySearch(nums, target, "right"),

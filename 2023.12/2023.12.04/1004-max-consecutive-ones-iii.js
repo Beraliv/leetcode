@@ -4,6 +4,10 @@
  * @return {number}
  */
 var longestOnes = function (nums, k) {
+  // Solution: Sliding Window
+  // Time: O(N)
+  // Space: O(1)
+
   let maxCount = 0;
   let left = 0;
   let right = 0;

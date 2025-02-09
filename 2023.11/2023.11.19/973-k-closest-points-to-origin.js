@@ -4,21 +4,25 @@
  * @return {number[][]}
  */
 var kClosest = function (points, k) {
-  const closestQueue = new MaxPriorityQueue({
+  // Solution: MaxHeap
+  // Time: O(N * logK)
+  // Space: O(K)
+
+  const maxHeap = new MaxPriorityQueue({
     priority: ([x, y]) => Math.sqrt(x * x + y * y),
   });
 
   for (const point of points) {
-    closestQueue.enqueue(point);
+    maxHeap.enqueue(point);
 
-    if (closestQueue.size() > k) {
-      closestQueue.dequeue();
+    if (maxHeap.size() > k) {
+      maxHeap.dequeue();
     }
   }
 
   const answer = [];
-  while (!closestQueue.isEmpty()) {
-    answer.push(closestQueue.dequeue().element);
+  while (!maxHeap.isEmpty()) {
+    answer.push(maxHeap.dequeue().element);
   }
   return answer;
 };

@@ -1,5 +1,7 @@
 // 8min
 /**
+ * Checked on Feb 9
+ *
  * @param {string} s
  * @return {boolean}
  */

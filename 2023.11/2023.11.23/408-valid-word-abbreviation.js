@@ -6,47 +6,30 @@ const isDigit = (ch) => /\d/.test(ch);
  * @return {boolean}
  */
 var validWordAbbreviation = function (word, abbr) {
-  let i = 0;
+  let i = 0,
+    j = 0,
+    number = 0;
 
-  let digits = "";
-  for (let k = 0; k < abbr.length; k++) {
-    const ch = abbr[k];
-
-    if (isDigit(ch)) {
-      if (digits.length === 0 && ch === "0") {
+  while (j < abbr.length) {
+    if (isDigit(abbr[j])) {
+      if (number === 0 && abbr[j] === "0") {
         // leading zero
         return false;
       }
 
-      digits += ch;
-      continue;
-    }
-
-    if (digits.length > 0) {
-      const skipCount = parseInt(digits);
-      i += skipCount;
-      digits = "";
-    }
-
-    if (i < word.length) {
-      if (word[i] === ch) {
-        i++;
-      } else {
-        // symbol didn't match in word and abbr
-        return false;
-      }
+      number = number * 10 + Number(abbr[j]);
+      j++;
+    } else if (number > 0) {
+      i += number;
+      number = 0;
+    } else if (i < word.length && word[i] === abbr[j]) {
+      i++;
+      j++;
     } else {
-      // run out of symbols in word - have more in abbr
       return false;
     }
   }
 
-  if (digits.length > 0) {
-    const skipCount = parseInt(digits);
-    i += skipCount;
-    digits = "";
-  }
-
   // run out of symbols in word and abbr
-  return i === word.length;
+  return i + number === word.length && j === abbr.length;
 };

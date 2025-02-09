@@ -18,7 +18,8 @@ function TreeNode(val, left, right) {
  */
 var sumNumbers = function (root) {
   // Solution 1. DFS
-  // O(N) time, O(H) space
+  // Time: O(N)
+  // Space: O(H)
   // let sum = 0;
 
   // if (root === null) {
@@ -47,7 +48,8 @@ var sumNumbers = function (root) {
   // return sum;
 
   // Solution 2. BFS
-  // O(N) time, O(W) space
+  // Time: O(N)
+  // Space: O(W)
   //   let sum = 0;
   //   const queue = new Queue();
   //   queue.enqueue({ node: root, value: 0 });
@@ -72,7 +74,9 @@ var sumNumbers = function (root) {
   //   }
 
   //   return sum;
-  // Solution 3. Morris traversal, O(N) time, O(1) space
+  // Solution 3. Morris traversal
+  // Time: O(N)
+  // Space: O(1)
   let sum = 0;
   let currentSum = 0;
 

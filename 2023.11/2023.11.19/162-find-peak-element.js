@@ -6,6 +6,10 @@ const numberOrFallback = (n, fallback) =>
  * @return {number}
  */
 var findPeakElement = function (nums) {
+  // Solution: binary search
+  // Time: O(logN)
+  // Space: O(1)
+
   let start = 0;
   let end = nums.length - 1;
 

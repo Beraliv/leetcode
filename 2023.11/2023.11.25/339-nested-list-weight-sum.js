@@ -11,7 +11,7 @@
  *
  *     Return the single integer that this NestedInteger holds, if it holds a single integer
  *     Return null if this NestedInteger holds a nested list
- *     @return {number | null}
+ *     @return {integer}
  *     this.getInteger = function() {
  *         ...
  *     };
@@ -30,49 +30,51 @@
  *
  *     Return the nested list that this NestedInteger holds, if it holds a nested list
  *     Return null if this NestedInteger holds a single integer
- *     @return {NestedInteger[] | null}
+ *     @return {NestedInteger[]}
  *     this.getList = function() {
  *         ...
  *     };
  * };
  */
 /**
- * 20m for 2 solutions
  * @param {NestedInteger[]} nestedList
  * @return {number}
  */
 var depthSum = function (nestedList) {
-  // Solution 1. O(N) time, O(D) space, where D - number of depth in an array
-  // let sum = 0;
+  // Solution 1: DFS (list + depth),
+  // Time: O(N)
+  // Space: O(D), O(N) in worst case
 
-  // const iteration = (array, depth) => {
-  //     for (const element of array) {
+  // const sumWithDepth = (list, depth) => {
+  //     let sum = 0;
+  //     for (const element of list) {
   //         if (element.isInteger()) {
-  //             sum += element.getInteger() * depth;
+  //             sum += depth * element.getInteger()
   //         } else {
-  //             iteration(element.getList(), depth + 1)
+  //             sum += sumWithDepth(element.getList(), depth + 1);
   //         }
   //     }
+  //     return sum;
   // }
 
-  // iteration(nestedList, 1);
+  // return sumWithDepth(nestedList, 1);
 
-  // return sum;
-
-  // Solution 2. O(N) time, O(N) space
+  // Solution 2. BFS + Queue (list + depth)
+  // Time: O(N)
+  // Space: O(N)
   let sum = 0;
 
   const queue = new Queue();
-  queue.enqueue({ array: nestedList, depth: 1 });
+  queue.enqueue({ list: nestedList, depth: 1 });
 
   while (!queue.isEmpty()) {
-    const { array, depth } = queue.dequeue();
+    const { list, depth } = queue.dequeue();
 
-    for (const element of array) {
+    for (const element of list) {
       if (element.isInteger()) {
         sum += element.getInteger() * depth;
       } else {
-        queue.enqueue({ array: element.getList(), depth: depth + 1 });
+        queue.enqueue({ list: element.getList(), depth: depth + 1 });
       }
     }
   }

@@ -3,6 +3,11 @@
  * @return {number}
  */
 var largestIsland = function (grid) {
+  // Solution: HashMap for Islands + DFS + Grid Mutation (marker) + Calculate
+  // Merged islands
+  // Time: O(N), where N is a number of cells in a grid
+  // Space: O(N + I), where I is a number of islands and N is max depth of DFS
+
   if (grid.length < 1) {
     return 0;
   }
@@ -77,16 +82,12 @@ var largestIsland = function (grid) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
       if (grid[i][j] === 0) {
-        largestIsland = Math.max(largestIsland, 1);
-
         const islands = findIslandsNearWater(i, j);
 
         let combinedIsland = 1;
-
         for (const island of islands) {
           combinedIsland += islandCount.get(island);
         }
-
         largestIsland = Math.max(largestIsland, combinedIsland);
       }
     }

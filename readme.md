@@ -89,6 +89,7 @@
 - [102. Binary Tree Level Order Traversal](/2023.11/2023.11.12/102-binary-tree-level-order-traversal.js) - BFS + Queue + Level Iteration, or DFS
 - [199. Binary Tree Right Side View](/2025.02/2025.02.08/199-binary-tree-right-side-view.js) - BFS + Queue + Level iteration, or DFS
 - [98. Validate Binary Search Tree](/2025.02/2025.02.08/98-validate-binary-search-tree.js) - BFS + Queue (node, minValue/maxValue) + Early Exit
+- [314. Binary Tree Vertical Order Traversal](/2023.11/2023.11.21/314-binary-tree-vertical-order-traversal.js) - BFS + Queue (left to right)
 
 ## Backtracking
 

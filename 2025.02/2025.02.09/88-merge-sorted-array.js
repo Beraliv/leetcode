@@ -1,7 +1,10 @@
 // 15m - 2 solutions
-function merge(as: number[], m: number, bs: number[], n: number): void {
+function merge(as, m, bs, n) {
   // 1. create array
   // 2. two pointers iteration
+  // Time: O(M + N)
+  // Space: O(1)
+
   let i = m - 1;
   let j = n - 1;
   let k = m + n - 1;

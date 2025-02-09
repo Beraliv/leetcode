@@ -40,6 +40,18 @@ var lowestCommonAncestor = function (p, q) {
   //   }
   // Solution 2. O(N) time, O(1) space
 
+  if (p === null || q === null) {
+    // invalid nodes
+
+    return null;
+  }
+
+  if (p === q) {
+    // same node
+
+    return p;
+  }
+
   let pDepth = getDepth(p);
   let qDepth = getDepth(q);
 
@@ -53,10 +65,18 @@ var lowestCommonAncestor = function (p, q) {
     }
   }
 
-  while (p !== q) {
+  while (p !== null && q !== null && p !== q) {
     p = p.parent;
     q = q.parent;
   }
+
+  if (p !== q) {
+    // p and q are from different trees
+
+    return null;
+  }
+
+  // found parent
 
   return p;
 };

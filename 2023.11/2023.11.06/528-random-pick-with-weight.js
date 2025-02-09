@@ -6,9 +6,8 @@ var Solution = function (weights) {
   for (let i = 0; i < weights.length; i++) {
     sum += weights[i];
   }
-  const probabilities = [weights[0] / sum];
-  for (let i = 1; i < weights.length; i++) {
-    probabilities[i] = probabilities[i - 1] + weights[i] / sum;
+  for (let i = 0; i < weights.length; i++) {
+    probabilities[i] = (probabilities[i - 1] || 0) + weights[i] / sum;
   }
   this.probabilities = probabilities;
 };

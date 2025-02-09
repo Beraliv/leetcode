@@ -5,6 +5,10 @@ const isLetter = (ch) => /[a-z0-9]/i.test(ch);
  * @return {boolean}
  */
 var isPalindrome = function (s) {
+  // Solution: 2 pointers
+  // Time: O(S)
+  // Space: O(1)
+
   let i = 0,
     j = s.length - 1;
 

@@ -3,8 +3,11 @@
  * @param {number} size
  */
 var MovingAverage = function (size) {
-  this.values = Array(size).fill(0);
+  // Time: O(N)
+  // Size: O(N)
   this.size = size;
+  if (size === 0) return;
+  this.values = Array(size).fill(0);
   this.index = 0;
   this.sum = 0;
 };
@@ -14,6 +17,9 @@ var MovingAverage = function (size) {
  * @return {number}
  */
 MovingAverage.prototype.next = function (value) {
+  // Time: O(1)
+  // Space: O(1)
+  if (this.size === 0) return -1;
   const circularIndex = this.index % this.size;
   const previousValue = this.values[circularIndex];
   this.values[circularIndex] = value;
