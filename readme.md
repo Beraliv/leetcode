@@ -22,6 +22,10 @@
 - [1570. Dot Product of Two Sparse Vectors](/2023.11/2023.11.19/1570-dot-product-of-two-sparse-vectors.js) - HashMap, or Array + 2 pointers
 - [287. Find the Duplicate Number](/2025.02/2025.02.07/287-find-the-duplicate-number.js) - Array, or Negative Marking in place, or Floyd's Cycle Finding Algorithm (2 Slow + fast iterations, Second to find an entrance to the cycle)
 
+## String
+
+- [1422. Maximum Score After Splitting a String](/2025.02/2025.02.08/1422-maximum-score-after-splitting-a-string.js) - 2 Iterations (pre-calculate ones + max on `zeros + ones`), or 1 Iteration (max on best, which is `zeros - ones`) + Calculate max (i.e. `best + ones`)
+
 ## 2 pointers
 
 - [125. Valid Palindrome](/2025.02/2025.02.06/125-valid-palindrome.js) - 2 pointers
@@ -50,6 +54,7 @@
 - [34. Find First and Last Position of Element in Sorted Array](/2025.02/2025.02.06/34-find-first-and-last-position-of-element-in-sorted-array.js) - 2 Binary searches - left and right bounds
 - [981. Time Based Key-Value Store](/2025.02/2025.02.07/981-time-based-key-value-store.js) - Map + Array + Upper bound
 - [4. Median of Two Sorted Arrays](/2025.02/2025.02.07/4-median-of-two-sorted-arrays.js) - Binary search on smallest array + left/right for 2 array
+- [235. Lowest Common Ancestor of a Binary Search Tree](/2023.12/2023.12.11/235-lowest-common-ancestor-of-a-binary-search-tree.js) - Binary search in BST tree
 
 ## LinkedList
 
@@ -61,16 +66,29 @@
 - [138. Copy List with Random Pointer](/2023.11/2023.11.08/138-copy-list-with-random-pointer.js) - HashMap for original/copy + 2 Iterations, or HashMap for original/copy + 1 Iteration, or 1 Iteration with copies next to original and 1 Iteration for separating originals and copies
 - [2. Add Two Numbers](/2025.02/2025.02.07/2-add-two-numbers.js) - 1 Iteration + overflow
 - [146. LRU Cache](/2023.11/2023.11.06/146-lru-cache.js) - Doubly Linked List + HashMap (key-node pairs) + addNode (tail) + remove (based on HashMap)
+- [25. Reverse Nodes in k-Group](/2025.02/2025.02.08/25-reverse-nodes-in-k-group.js) - 2 pointers (to keep K-block) + revert
 
 ## DFS
 
 - [785. Is Graph Bipartite?](/2025.01/2025.01.30/785-is-graph-bipartite.js) - DFS + colour
 - [827. Making A Large Island](/2023.12/2023.12.24/827-making-a-large-island.js) - HashMap + DFS
+- [226. Invert Binary Tree](/2023.12/2023.12.11/226-invert-binary-tree.js) - DFS, or Queue + BFS
+- [104. Maximum Depth of Binary Tree](/2023.11/2023.11.16/104-maximum-depth-of-binary-tree.js) - DFS, or Iterative DFS + Stack
+- [543. Diameter of Binary Tree](/2025.02/2025.02.08/543-diameter-of-binary-tree.js) - DFS + Intermediate calculation
+- [110. Balanced Binary Tree](/2023.11/2023.11.12/110-balanced-binary-tree.js) - DFS + Collecting info (depth and balanced)
+- [100. Same Tree](/2023.11/2023.11.16/100-same-tree.js) - DFS, or BFS + Queue + Early exit
+- [1448. Count Good Nodes in Binary Tree](/2023.12/2023.12.11/1448-count-good-nodes-in-binary-tree.js) - DFS (node, maxValue) + Count, or BFS + Queue (node, maxValue) + Count
+- [230. Kth Smallest Element in a BST](/2025.02/2025.02.08/230-kth-smallest-element-in-a-bst.js) - DFS + in-order traversal, or Iterative DFS + Stack
+- [124. Binary Tree Maximum Path Sum](/2025.02/2025.02.08/124-binary-tree-maximum-path-sum.js) - DFS + post-order traversal + maximumPath calculation
+- [536. Construct Binary Tree from String](/2025.02/2025.02.08/536-construct-binary-tree-from-string.js) - DFS + Number parsing + Index calculating
 
 ## BFS
 
-- [102. Binary Tree Level Order Traversal](/2023.11/2023.11.12/102-binary-tree-level-order-traversal.js) - Queue
+- [102. Binary Tree Level Order Traversal](/2023.11/2023.11.12/102-binary-tree-level-order-traversal.js) - Queue + BFS
 - [2493. Divide Nodes Into the Maximum Number of Groups](/2025.01/2025.01.30/2493-divide-nodes-into-the-maximum-number-of-groups.js) - UnionFind + BFS + levels
+- [102. Binary Tree Level Order Traversal](/2023.11/2023.11.12/102-binary-tree-level-order-traversal.js) - BFS + Queue + Level Iteration, or DFS
+- [199. Binary Tree Right Side View](/2025.02/2025.02.08/199-binary-tree-right-side-view.js) - BFS + Queue + Level iteration, or DFS
+- [98. Validate Binary Search Tree](/2025.02/2025.02.08/98-validate-binary-search-tree.js) - BFS + Queue (node, minValue/maxValue) + Early Exit
 
 ## Backtracking
 
@@ -81,6 +99,7 @@
 - [295. Find Median from Data Stream](/2025.02/2025.02.05/295-find-median-from-data-stream.js) - MinHeap + MaxHeap
 - [23. Merge k Sorted Lists](/2023.11/2023.11.11/23-merge-k-sorted-lists.js) - MinHeap + first element
 - [373. Find K Pairs with Smallest Sums](/2025.02/2025.02.07/373-find-k-pairs-with-smallest-sums.js) - MinHeap + HashSet for visited + (i, j) => (i + 1, j), (i, j + 1) iteration
+- [2349. Design a Number Container System](/2025.02/2025.02.08/2349-design-a-number-container-system.js) - 2 Maps + MinHeap + dequeue (when index doesn't match number)
 
 ## Topological sort
 

@@ -13,25 +13,27 @@
  * @return {TreeNode}
  */
 var lowestCommonAncestor = function (root, p, q) {
-  if (root === null) {
+  // Solution 1. Binary search
+  // Time: O(log N)
+  // Space: O(1)
+
+  if (root === null || p === null || q === null) {
     return null;
   }
 
-  while (root !== null) {
-    const val = root.val;
-    const pVal = p.val;
-    const qVal = q.val;
+  let min = Math.min(p.val, q.val);
+  let max = Math.max(p.val, q.val);
+  let curr = root;
 
-    if (pVal > val && qVal > val && root.right !== null) {
-      root = root.right;
-      continue;
+  while (curr !== null) {
+    if (curr.val < min) {
+      curr = curr.right;
+    } else if (curr.val > max) {
+      curr = curr.left;
+    } else {
+      return curr;
     }
-
-    if (pVal < val && qVal < val && root.left !== null) {
-      root = root.left;
-      continue;
-    }
-
-    return root;
   }
+
+  return null;
 };

@@ -5,30 +5,38 @@ import { Queue } from "@datastructures-js/queue";
  * @return {number[][]}
  */
 var levelOrder = function (root) {
-  if (!root) {
+  // BFS + Queue
+  // Time: O(N)
+  // Space: O(N)
+
+  if (root === null) {
     return [];
   }
 
+  const queue = new Queue();
+  queue.enqueue(root);
+
   const levels = [];
 
-  const queue = new Queue();
-  queue.enqueue({ node: root, level: 0 });
-
   while (!queue.isEmpty()) {
-    const { node, level } = queue.dequeue();
+    let levelSize = queue.size();
 
-    if (!levels[level]) {
-      levels[level] = [];
-    }
-    levels[level].push(node.val);
+    const level = [];
 
-    if (node.left !== null) {
-      queue.enqueue({ node: node.left, level: level + 1 });
+    for (let i = 0; i < levelSize; i++) {
+      const node = queue.dequeue();
+      level.push(node.val);
+
+      if (node.left !== null) {
+        queue.enqueue(node.left);
+      }
+
+      if (node.right !== null) {
+        queue.enqueue(node.right);
+      }
     }
 
-    if (node.right !== null) {
-      queue.enqueue({ node: node.right, level: level + 1 });
-    }
+    levels.push(level);
   }
 
   return levels;

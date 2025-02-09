@@ -1,8 +1,3 @@
-function TreeInfo(height, balanced) {
-  this.height = height;
-  this.balanced = balanced;
-}
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -16,31 +11,30 @@ function TreeInfo(height, balanced) {
  * @return {boolean}
  */
 var isBalanced = function (root) {
-  if (!root) {
-    return true;
-  }
+  // DFS with collecting information
+  // Time: O(N)
+  // Space: O(N) for all trees and O(logN) for balanced trees
 
-  const balanceSearch = (node, height) => {
+  const dfs = (node, depth) => {
     if (node === null) {
-      return new TreeInfo(height - 1, true);
+      return { depth: depth - 1, balanced: true };
     }
 
-    const leftTreeInfo = balanceSearch(node.left, height + 1);
-    if (!leftTreeInfo.balanced) {
-      return new TreeInfo(height, false);
-    }
-    const rightTreeInfo = balanceSearch(node.right, height + 1);
-    if (!rightTreeInfo.balanced) {
-      return new TreeInfo(height, false);
+    let leftInfo = dfs(node.left, depth + 1);
+    if (!leftInfo.balanced) {
+      return { depth, balanced: false };
     }
 
-    const treeInfo = new TreeInfo(
-      Math.max(leftTreeInfo.height, height, rightTreeInfo.height),
-      Math.abs(rightTreeInfo.height - leftTreeInfo.height) <= 1
-    );
+    const rightInfo = dfs(node.right, depth + 1);
+    if (!rightInfo.balanced) {
+      return { depth, balanced: false };
+    }
 
-    return treeInfo;
+    return {
+      depth: Math.max(leftInfo.depth, depth, rightInfo.depth),
+      balanced: Math.abs(leftInfo.depth - rightInfo.depth) <= 1,
+    };
   };
 
-  return balanceSearch(root, 0).balanced;
+  return dfs(root, 0).balanced;
 };

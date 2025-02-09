@@ -11,20 +11,23 @@
  * @return {TreeNode}
  */
 var invertTree = function (root) {
+  // Solution 1. DFS
+  // Time: O(N)
+  // Space: O(N) for all trees and O(logN) for balanced trees
   if (root === null) {
     return null;
   }
 
   const invertDfs = (node) => {
-    const temp = node.left;
+    const leftNode = node.left;
     node.left = node.right;
-    node.right = temp;
+    node.right = leftNode;
 
-    if (node.left) {
+    if (node.left !== null) {
       invertDfs(node.left);
     }
 
-    if (node.right) {
+    if (node.right !== null) {
       invertDfs(node.right);
     }
   };
