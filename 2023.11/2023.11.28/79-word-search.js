@@ -4,26 +4,50 @@
  * @return {boolean}
  */
 var exist = function (board, word) {
-  const rows = board.length;
-  const columns = board[0].length;
+  if (word.length === 0) {
+    return false;
+  }
 
-  const backtrack = (x0, y0, index) => {
-    if (index >= word.length) {
-      return true;
+  const m = board.length;
+  if (m === 0) {
+    return false;
+  }
+
+  const n = board[0].length;
+
+  if (word.length > m * n) {
+    return false;
+  }
+
+  const directions = [
+    [1, 0],
+    [0, 1],
+    [-1, 0],
+    [0, -1],
+  ];
+
+  const dfs = (x0, y0, index) => {
+    if (index === word.length - 1) {
+      return board[x0][y0] === word[index];
     }
 
-    if (x0 < 0 || x0 >= rows) return false;
-    if (y0 < 0 || y0 >= columns) return false;
-    if (board[x0][y0] !== word[index]) return false;
+    if (board[x0][y0] !== word[index]) {
+      return false;
+    }
 
     // mark as visited
     board[x0][y0] = "#";
 
-    const result =
-      backtrack(x0 + 1, y0, index + 1) ||
-      backtrack(x0, y0 + 1, index + 1) ||
-      backtrack(x0 - 1, y0, index + 1) ||
-      backtrack(x0, y0 - 1, index + 1);
+    let result = false;
+    for (const [dx, dy] of directions) {
+      const x = x0 + dx;
+      const y = y0 + dy;
+
+      if (x < 0 || x >= m) continue;
+      if (y < 0 || y >= n) continue;
+
+      result ||= dfs(x, y, index + 1);
+    }
 
     // cleanup
     board[x0][y0] = word[index];
@@ -31,9 +55,9 @@ var exist = function (board, word) {
     return result;
   };
 
-  for (let x = 0; x < rows; x++) {
-    for (let y = 0; y < columns; y++) {
-      if (backtrack(x, y, 0)) {
+  for (let x = 0; x < m; x++) {
+    for (let y = 0; y < n; y++) {
+      if (dfs(x, y, 0)) {
         return true;
       }
     }

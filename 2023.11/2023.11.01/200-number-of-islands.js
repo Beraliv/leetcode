@@ -3,6 +3,18 @@
  * @return {number}
  */
 const numIslands = (grid) => {
+  // Solution 1: DFS + Grid Mutation
+  // Time: O(M * N)
+  // Space: O(M + N)
+
+  const m = grid.length;
+
+  if (m === 0) {
+    return 0;
+  }
+
+  const n = grid[0].length;
+
   const directions = [
     [-1, 0],
     [0, -1],
@@ -10,19 +22,16 @@ const numIslands = (grid) => {
     [0, 1],
   ];
 
-  const dfs = (i, j) => {
-    grid[i][j] = "0";
+  const dfs = (x0, y0) => {
+    grid[x0][y0] = "0";
 
-    for (const [di, dj] of directions) {
-      const x = i + di;
-      const y = j + dj;
+    for (const [dx, dy] of directions) {
+      const x = x0 + dx;
+      const y = y0 + dy;
 
-      if (x < 0 || x >= grid.length) continue;
-
-      const row = grid[x];
-
-      if (y < 0 || y >= row.length) continue;
-      if (row[y] !== "1") continue;
+      if (x < 0 || x >= m) continue;
+      if (y < 0 || y >= n) continue;
+      if (grid[x][y] !== "1") continue;
 
       dfs(x, y);
     }
@@ -30,10 +39,8 @@ const numIslands = (grid) => {
 
   let count = 0;
 
-  for (let i = 0; i < grid.length; i++) {
-    const gridRow = grid[i];
-
-    for (let j = 0; j < gridRow.length; j++) {
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
       if (grid[i][j] === "1") {
         count++;
         dfs(i, j);
@@ -43,3 +50,11 @@ const numIslands = (grid) => {
 
   return count;
 };
+
+console.log(
+  numIslands([
+    ["1", "1", "1"],
+    ["0", "1", "0"],
+    ["1", "1", "1"],
+  ])
+);

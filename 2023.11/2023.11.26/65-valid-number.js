@@ -1,3 +1,4 @@
+// Solution 1: My solution - very explicit
 // const allowSymbol = (check) => {
 //   if (check.e) {
 //     if (check.eBase) {
@@ -125,56 +126,136 @@
 //   return true;
 // };
 
-const SIGNS = ["-", "+"];
-const E_SIGNS = ["e", "E"];
+// Solution 2: recursive
+// Time: O(N)
+// Space: O(1), given tail recursion is optimised, or O(N) if not optimised
+const isAlpha = (ch) => /[a-zA-Z]/.test(ch);
+const isDigit = (ch) => /\d/.test(ch);
 
-const dfa = [
-  // 0: empty state
-  { sign: 1, digit: 2, dot: 3 },
-  // 1: sign
-  { digit: 2, dot: 3 },
-  // 2: integer
-  { digit: 2, dot: 4, e: 5 },
-  // 3: dot
-  { digit: 4 },
-  // 4: float
-  { digit: 4, e: 5 },
-  // 5: e
-  { sign: 6, digit: 7 },
-  // 6: sign
-  { digit: 7 },
-  // 7: base
-  { digit: 7 },
-];
+const isNumber = function (s) {
+  const isValidInteger = (startIndex) => {
+    let i = startIndex;
 
-const FINAL_STATES = [2, 4, 7];
-
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isNumber = function (s) {
-  let state = 0;
-  for (const ch of s) {
-    let group;
-    if (/\d/.test(ch)) {
-      group = "digit";
-    } else if (SIGNS.includes(ch)) {
-      group = "sign";
-    } else if (ch === ".") {
-      group = "dot";
-    } else if (E_SIGNS.includes(ch)) {
-      group = "e";
-    } else {
+    if (i >= s.length) {
       return false;
     }
 
-    if (!dfa[state]) {
-      return false;
+    const checks = {
+      dot: false,
+      number: false,
+    };
+
+    if (["-", "+"].includes(s[i])) {
+      i++;
     }
 
-    state = dfa[state][group];
-  }
+    while (i < s.length) {
+      const ch = s[i];
 
-  return FINAL_STATES.includes(state);
+      if (!isDigit(ch)) {
+        return false;
+      } else {
+        checks.number = true;
+      }
+
+      i++;
+    }
+
+    return checks.number;
+  };
+
+  const isValidNumber = (startIndex) => {
+    const checks = {
+      dot: false,
+      number: false,
+    };
+
+    let i = startIndex;
+
+    if (["-", "+"].includes(s[i])) {
+      i++;
+    }
+
+    while (i < s.length) {
+      const ch = s[i];
+
+      if (isAlpha(ch)) {
+        if (!["e", "E"].includes(ch)) {
+          return false;
+        }
+
+        return checks.number && isValidInteger(i + 1);
+      } else if (ch === ".") {
+        if (checks.dot) {
+          return false;
+        } else {
+          checks.dot = true;
+        }
+      } else if (["-", "+"].includes(ch)) {
+        return false;
+      } else {
+        checks.number = true;
+      }
+
+      i++;
+    }
+
+    return checks.number;
+  };
+
+  return isValidNumber(0);
 };
+
+// const SIGNS = ["-", "+"];
+// const E_SIGNS = ["e", "E"];
+
+// const dfa = [
+//   // 0: empty state
+//   { sign: 1, digit: 2, dot: 3 },
+//   // 1: sign
+//   { digit: 2, dot: 3 },
+//   // 2: integer
+//   { digit: 2, dot: 4, e: 5 },
+//   // 3: dot
+//   { digit: 4 },
+//   // 4: float
+//   { digit: 4, e: 5 },
+//   // 5: e
+//   { sign: 6, digit: 7 },
+//   // 6: sign
+//   { digit: 7 },
+//   // 7: base
+//   { digit: 7 },
+// ];
+
+// const FINAL_STATES = [2, 4, 7];
+
+// /**
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// var isNumber = function (s) {
+//   let state = 0;
+//   for (const ch of s) {
+//     let group;
+//     if (/\d/.test(ch)) {
+//       group = "digit";
+//     } else if (SIGNS.includes(ch)) {
+//       group = "sign";
+//     } else if (ch === ".") {
+//       group = "dot";
+//     } else if (E_SIGNS.includes(ch)) {
+//       group = "e";
+//     } else {
+//       return false;
+//     }
+
+//     if (!dfa[state]) {
+//       return false;
+//     }
+
+//     state = dfa[state][group];
+//   }
+
+//   return FINAL_STATES.includes(state);
+// };
