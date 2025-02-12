@@ -4,6 +4,11 @@
  * @return {number}
  */
 var tupleSameProduct = function (nums) {
+  // Solution: Product for every pair + HashMap, then calculate pairs N * (N -
+  // 1) / 2 and multiplied by 8 combinations
+  // Time: O(N ^ 2)
+  // Space: O(N ^ 2) worst, or O(P) where P is a number of unique products
+
   const n = nums.length;
   const frequencyMap = new Map();
 

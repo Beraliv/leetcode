@@ -7,25 +7,20 @@ var longestCommonPrefix = function (strs) {
     return "";
   }
 
-  let common = strs[0];
+  let start = 0,
+    end = 0;
 
-  for (let i = 1; i < strs.length; i++) {
-    let j = 0;
+  while (true) {
+    if (end >= strs[0].length) {
+      return strs[0].substring(start, end);
+    }
 
-    while (j < Math.min(common.length, strs[i].length)) {
-      if (strs[i][j] === common[j]) {
-        j++;
-      } else {
-        break;
+    for (let i = 1; i < strs.length; i++) {
+      if (end >= strs[i].length || strs[i][end] !== strs[0][end]) {
+        return strs[0].substring(start, end);
       }
     }
 
-    if (j === 0) {
-      return "";
-    }
-
-    common = strs[i].slice(0, j);
+    end++;
   }
-
-  return common;
 };

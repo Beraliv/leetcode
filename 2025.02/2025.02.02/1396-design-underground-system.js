@@ -42,6 +42,8 @@ UndergroundSystem.prototype.checkOut = function (id, stationName, t) {
   if (this.averageMap.has(hash)) {
     const { average, n } = this.averageMap.get(hash);
     const multiplier = n / (n + 1);
+    // pro: avoids overflows
+    // con: minor miscalculations around floating point are possible
     const nextAverage = (average + time / n) * multiplier;
     this.averageMap.set(hash, { average: nextAverage, n: n + 1 });
   } else {
