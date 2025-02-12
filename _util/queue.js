@@ -3,23 +3,20 @@
  */
 class QueueItem {
   /**
-   * @public
-   * @type {T}
-   */
-  value;
-  /**
-   * @public
-   * @type {QueueItem<T> | null}
-   */
-  next;
-
-  /**
    *
    * @param {T} value
    * @param {QueueItem<T> | null} next
    */
   constructor(value, next = null) {
+    /**
+     * @public
+     * @type {T}
+     */
     this.value = value;
+    /**
+     * @public
+     * @type {QueueItem<T> | null}
+     */
     this.next = next;
   }
 }
