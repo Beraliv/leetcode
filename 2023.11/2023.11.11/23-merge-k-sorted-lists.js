@@ -1,9 +1,5 @@
 import { MinPriorityQueue } from "@datastructures-js/priority-queue";
-
-function ListNode(val, next) {
-  this.val = val === undefined ? 0 : val;
-  this.next = next === undefined ? null : next;
-}
+import { ListNode } from "../../_util/listNode.js";
 
 /**
  * Definition for singly-linked list.
