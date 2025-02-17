@@ -6,6 +6,10 @@ const isDigit = (ch) => /\d/.test(ch);
  * @return {boolean}
  */
 var validWordAbbreviation = function (word, abbr) {
+  // Solution: 2 pointers
+  // Time: O(N + M)
+  // Space: O(1)
+
   let i = 0,
     j = 0,
     number = 0;

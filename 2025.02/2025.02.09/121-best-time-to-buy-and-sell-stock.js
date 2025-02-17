@@ -1,5 +1,5 @@
 function maxProfit(prices) {
-  // Solution: Iteration with minPrice and maximising a gain
+  // Solution: Iteration with minPrice and gain maximisation
   // Time: O(N)
   // Space: O(1)
 

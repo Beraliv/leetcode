@@ -101,7 +101,9 @@ var calculate = function (s) {
   // const result = calculateNotation(notation);
   // return result;
 
-  // Solution 2. No stack, O(N) time, O(1) space
+  // Solution 2. No stack + 1 Iteration
+  // Time: O(N)
+  // Space: O(1)
 
   let sum = 0;
   let previousNumber = 0,

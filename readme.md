@@ -21,6 +21,13 @@
 - [238. Product of Array Except Self](/2025.02/2025.02.03/238-product-of-array-except-self.js) - Array + 2 accumulators
 - [1570. Dot Product of Two Sparse Vectors](/2023.11/2023.11.19/1570-dot-product-of-two-sparse-vectors.js) - HashMap, or Array + 2 pointers
 - [287. Find the Duplicate Number](/2025.02/2025.02.07/287-find-the-duplicate-number.js) - Array, or Negative Marking in place, or Floyd's Cycle Finding Algorithm (2 Slow + fast iterations, Second to find an entrance to the cycle)
+- [346. Moving Average from Data Stream](/2023.11/2023.11.06/346-moving-average-from-data-stream.js) - Array + Circular Index
+- [560. Subarray Sum Equals K](/2023.11/2023.11.16/560-subarray-sum-equals-k.js) - HashMap + 1 Iteration
+- [1762. Buildings With an Ocean View](/2023.11/2023.11.19/1762-buildings-with-an-ocean-view.js) - Right to Left Iteration + Swap in place
+- [56. Merge Intervals](/2023.11/2023.11.19/56-merge-intervals.js) - Sort + Merge in array
+- [227. Basic Calculator II](/2023.11/2023.11.24/227-basic-calculator-ii.js) - No stack + 1 Iteration
+- [121. Best Time to Buy and Sell Stock](/2025.02/2025.02.09/121-best-time-to-buy-and-sell-stock.js) - 1 Iteration + Maximum by gain (from minPrice)
+- [2364. Count Number of Bad Pairs](/2025.02/2025.02.09/2364-count-number-of-bad-pairs.js) - HashMap + Iteration
 
 ## String
 
@@ -33,6 +40,14 @@
 - [15. 3Sum](/2025.02/2025.02.06/15-3sum.js) - Sort + Linear search + 2 pointers
 - [11. Container With Most Water](/2025.02/2025.02.06/11-container-with-most-water.js) - 2 pointers + leftMax/rightMax
 - [42. Trapping Rain Water](/2025.02/2025.02.06/42-trapping-rain-water.js) - Stack, or 2 pointers
+- [680. Valid Palindrome II](/2023.11/2023.11.06/680-valid-palindrome-ii.js) - 2 pointers + 2 recursive calls when error happened
+- [408. Valid Word Abbreviation](/2023.11/2023.11.23/408-valid-word-abbreviation.js) - 2 pointers
+- [986. Interval List Intersections](/2023.12/2023.12.08/986-interval-list-intersections.js) - 2 pointers
+- [88. Merge Sorted Array](/2025.02/2025.02.09/88-merge-sorted-array.js) - 2 Pointers
+
+## Sliding Window
+
+- [1004. Max Consecutive Ones III](/2023.12/2023.12.04/1004-max-consecutive-ones-iii.js) - Sliding Window
 
 ## Stack
 
@@ -42,6 +57,7 @@
 - [739. Daily Temperatures](/2023.11/2023.11.14/739-daily-temperatures.js) - Stack + Monotonic sequence, or Answer + Iteration from end + Jumping
 - [853. Car Fleet](/2023.12/2023.12.10/853-car-fleet.js) - Sort + Iteration from end, or HashMap + iteration from end, or Sparse Array + Iteration from end
 - [84. Largest Rectangle in Histogram](/2025.02/2025.02.06/84-largest-rectangle-in-histogram.js) - Brute Force, or Divide and Conquer by min height, or Stack + Monotonic Increasing sequence
+- [71. Simplify Path](/2023.11/2023.11.24/71-simplify-path.js) - Stack + 1 Iteration
 
 ## Binary Search
 
@@ -55,6 +71,8 @@
 - [981. Time Based Key-Value Store](/2025.02/2025.02.07/981-time-based-key-value-store.js) - Map + Array + Upper bound
 - [4. Median of Two Sorted Arrays](/2025.02/2025.02.07/4-median-of-two-sorted-arrays.js) - Binary search on smallest array + left/right for 2 array
 - [235. Lowest Common Ancestor of a Binary Search Tree](/2023.12/2023.12.11/235-lowest-common-ancestor-of-a-binary-search-tree.js) - Binary search in BST tree
+- [528. Random Pick with Weight](2023.11/2023.11.06/528-random-pick-with-weight.js) - Sorted Array + Binary Search (-1, <=, -1/+1, middle)
+- [162. Find Peak Element](/2023.11/2023.11.19/162-find-peak-element.js) - Binary Search (-1, <, -1/+1, middle/start)
 
 ## LinkedList
 
@@ -81,6 +99,10 @@
 - [230. Kth Smallest Element in a BST](/2025.02/2025.02.08/230-kth-smallest-element-in-a-bst.js) - DFS + in-order traversal, or Iterative DFS + Stack
 - [124. Binary Tree Maximum Path Sum](/2025.02/2025.02.08/124-binary-tree-maximum-path-sum.js) - DFS + post-order traversal + maximumPath calculation
 - [536. Construct Binary Tree from String](/2025.02/2025.02.08/536-construct-binary-tree-from-string.js) - DFS + Number parsing + Index calculating
+- [236. Lowest Common Ancestor of a Binary Tree](/2023.11/2023.11.13/236-lowest-common-ancestor-of-a-binary-tree.js) - DFS + Parent HashSet
+- [938. Range Sum of BST](/2023.11/2023.11.23/938-range-sum-of-bst.js) - DFS + Optimisation for BST
+- [339. Nested List Weight Sum](/2023.11/2023.11.25/339-nested-list-weight-sum.js) - DFS (list + depth)
+- [129. Sum Root to Leaf Numbers](/2023.12/2023.12.28/129-sum-root-to-leaf-numbers.js) - DFS, or BFS, or Morris traversal (next node mutation)
 
 ## BFS
 
@@ -90,6 +112,12 @@
 - [199. Binary Tree Right Side View](/2025.02/2025.02.08/199-binary-tree-right-side-view.js) - BFS + Queue + Level iteration, or DFS
 - [98. Validate Binary Search Tree](/2025.02/2025.02.08/98-validate-binary-search-tree.js) - BFS + Queue (node, minValue/maxValue) + Early Exit
 - [314. Binary Tree Vertical Order Traversal](/2023.11/2023.11.21/314-binary-tree-vertical-order-traversal.js) - BFS + Queue (left to right)
+- [1091. Shortest Path in Binary Matrix](/2023.11/2023.11.20/1091-shortest-path-in-binary-matrix.js) - Queue + Visited 2D Array
+- [987. Vertical Order Traversal of a Binary Tree](/2023.11/2023.11.26/987-vertical-order-traversal-of-a-binary-tree.js) - BFS + Local Sort
+
+## Tree (rest)
+
+- [1650. Lowest Common Ancestor of a Binary Tree III](/2023.11/2023.11.21/1650-lowest-common-ancestor-of-a-binary-tree-iii.js) - Calculate 2 depths + Align to same depth
 
 ## Backtracking
 
@@ -101,10 +129,12 @@
 - [23. Merge k Sorted Lists](/2023.11/2023.11.11/23-merge-k-sorted-lists.js) - MinHeap + first element
 - [373. Find K Pairs with Smallest Sums](/2025.02/2025.02.07/373-find-k-pairs-with-smallest-sums.js) - MinHeap + HashSet for visited + (i, j) => (i + 1, j), (i, j + 1) iteration
 - [2349. Design a Number Container System](/2025.02/2025.02.08/2349-design-a-number-container-system.js) - 2 Maps + MinHeap + dequeue (when index doesn't match number)
+- [215. Kth Largest Element in an Array](/2023.11/2023.11.11/215-kth-largest-element-in-an-array.js) - MinHeap + first element
+- [973. K Closest Points to Origin](/2023.11/2023.11.19/973-k-closest-points-to-origin.js) - MaxHeap
 
 ## Topological sort
 
 Kahn's algorithm
 
-- [Course Schedule 2](/2023.11/2023.11.13/210-course-schedule-ii.js)
+- [210. Course Schedule II](/2023.11/2023.11.13/210-course-schedule-ii.js) - Topological Sort
 - [Course Schedule 4](/2025.01/2025.01.29/1462-course-schedule-iv.js)

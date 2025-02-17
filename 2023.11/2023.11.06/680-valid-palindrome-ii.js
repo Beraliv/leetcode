@@ -1,11 +1,13 @@
 // 8min
 /**
- * Checked on Feb 9
- *
  * @param {string} s
  * @return {boolean}
  */
 var validPalindrome = function (s) {
+  // Solution: 2 pointers
+  // Time: O(N)
+  // Space: O(1)
+
   let i = 0;
   let j = s.length - 1;
 

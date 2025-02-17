@@ -1,3 +1,5 @@
+import { MaxPriorityQueue } from "@datastructures-js/priority-queue";
+
 /**
  * @param {number[][]} points
  * @param {number} k
