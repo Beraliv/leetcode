@@ -28,6 +28,7 @@
 - [227. Basic Calculator II](/2023.11/2023.11.24/227-basic-calculator-ii.js) - No stack + 1 Iteration
 - [121. Best Time to Buy and Sell Stock](/2025.02/2025.02.09/121-best-time-to-buy-and-sell-stock.js) - 1 Iteration + Maximum by gain (from minPrice)
 - [2364. Count Number of Bad Pairs](/2025.02/2025.02.09/2364-count-number-of-bad-pairs.js) - HashMap + Iteration
+- [53. Maximum Subarray](/2023.11/2023.11.22/53-maximum-subarray.js) - 1 Iteration + Global/Local Max
 
 ## String
 
@@ -58,6 +59,8 @@
 - [853. Car Fleet](/2023.12/2023.12.10/853-car-fleet.js) - Sort + Iteration from end, or HashMap + iteration from end, or Sparse Array + Iteration from end
 - [84. Largest Rectangle in Histogram](/2025.02/2025.02.06/84-largest-rectangle-in-histogram.js) - Brute Force, or Divide and Conquer by min height, or Stack + Monotonic Increasing sequence
 - [71. Simplify Path](/2023.11/2023.11.24/71-simplify-path.js) - Stack + 1 Iteration
+- [2375. Construct Smallest Number From DI String](/2025.02/2025.02.18/2375-construct-smallest-number-from-di-string.js) - Backtrack + HashSet (visited), or Stack + Pop all digits when meeting I
+- [1047. Remove All Adjacent Duplicates In String](/2025.02/2025.02.18/1047-remove-all-adjacent-duplicates-in-string.js) - Stack + Pop latest character when meeting duplicates
 
 ## Binary Search
 
@@ -73,6 +76,7 @@
 - [235. Lowest Common Ancestor of a Binary Search Tree](/2023.12/2023.12.11/235-lowest-common-ancestor-of-a-binary-search-tree.js) - Binary search in BST tree
 - [528. Random Pick with Weight](2023.11/2023.11.06/528-random-pick-with-weight.js) - Sorted Array + Binary Search (-1, <=, -1/+1, middle)
 - [162. Find Peak Element](/2023.11/2023.11.19/162-find-peak-element.js) - Binary Search (-1, <, -1/+1, middle/start)
+- [644. Maximum Average Subarray II](/2025.02/2025.02.18/644-maximum-average-subarray-ii.js) - Binary Search (Float, min/max, >= EPS, 0/0, (start+end)/2)
 
 ## LinkedList
 
@@ -138,3 +142,7 @@ Kahn's algorithm
 
 - [210. Course Schedule II](/2023.11/2023.11.13/210-course-schedule-ii.js) - Topological Sort
 - [Course Schedule 4](/2025.01/2025.01.29/1462-course-schedule-iv.js)
+
+## Dynamic Programming
+
+- [139. Word Break](/2025.02/2025.02.18/139-word-break.js) - Backtracking + HashSet, or BFS + Queue + 2 HashSets (Dictionary + Visited), or DP (TODO)
