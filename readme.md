@@ -61,6 +61,7 @@
 - [71. Simplify Path](/2023.11/2023.11.24/71-simplify-path.js) - Stack + 1 Iteration
 - [2375. Construct Smallest Number From DI String](/2025.02/2025.02.18/2375-construct-smallest-number-from-di-string.js) - Backtrack + HashSet (visited), or Stack + Pop all digits when meeting I
 - [1047. Remove All Adjacent Duplicates In String](/2025.02/2025.02.18/1047-remove-all-adjacent-duplicates-in-string.js) - Stack + Pop latest character when meeting duplicates
+- [1028. Recover a Tree From Preorder Traversal](/2025.02/2025.02.22/1028-recover-a-tree-from-preorder-traversal.js) - 1 Iteration + Stack
 
 ## Binary Search
 
