@@ -29,6 +29,7 @@
 - [121. Best Time to Buy and Sell Stock](/2025.02/2025.02.09/121-best-time-to-buy-and-sell-stock.js) - 1 Iteration + Maximum by gain (from minPrice)
 - [2364. Count Number of Bad Pairs](/2025.02/2025.02.09/2364-count-number-of-bad-pairs.js) - HashMap + Iteration
 - [53. Maximum Subarray](/2023.11/2023.11.22/53-maximum-subarray.js) - 1 Iteration + Global/Local Max
+- [1524. Number of Sub-arrays With Odd Sum](/2025.02/2025.02.25/1524-number-of-sub-arrays-with-odd-sum.js) - Prefix Sum + Odd/Even Count
 
 ## String
 
@@ -61,7 +62,8 @@
 - [71. Simplify Path](/2023.11/2023.11.24/71-simplify-path.js) - Stack + 1 Iteration
 - [2375. Construct Smallest Number From DI String](/2025.02/2025.02.18/2375-construct-smallest-number-from-di-string.js) - Backtrack + HashSet (visited), or Stack + Pop all digits when meeting I
 - [1047. Remove All Adjacent Duplicates In String](/2025.02/2025.02.18/1047-remove-all-adjacent-duplicates-in-string.js) - Stack + Pop latest character when meeting duplicates
-- [1028. Recover a Tree From Preorder Traversal](/2025.02/2025.02.22/1028-recover-a-tree-from-preorder-traversal.js) - 1 Iteration + Stack
+- [1028. Recover a Tree From Preorder Traversal](/2025.02/2025.02.22/1028-recover-a-tree-from-preorder-traversal.js) - Stack + 1 Iteration
+- [224. Basic Calculator](2025.02/2025.02.25/224-basic-calculator.js) - Stack + 1 Iteration
 
 ## Binary Search
 
