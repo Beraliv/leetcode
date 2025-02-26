@@ -30,6 +30,7 @@
 - [2364. Count Number of Bad Pairs](/2025.02/2025.02.09/2364-count-number-of-bad-pairs.js) - HashMap + Iteration
 - [53. Maximum Subarray](/2023.11/2023.11.22/53-maximum-subarray.js) - 1 Iteration + Global/Local Max
 - [1524. Number of Sub-arrays With Odd Sum](/2025.02/2025.02.25/1524-number-of-sub-arrays-with-odd-sum.js) - Prefix Sum + Odd/Even Count
+- [1749. Maximum Absolute Sum of Any Subarray](/2025.02/2025.02.26/1749-maximum-absolute-sum-of-any-subarray.js) - Prefix Sum + Min/Max
 
 ## String
 
@@ -131,6 +132,7 @@
 ## Backtracking
 
 - [22. Generate Parentheses](/2023.11/2023.11.14/22-generate-parentheses.js) - Backtracking + opening/closing balance
+- [282. Expression Add Operators](/2025.02/2025.02.26/282-expression-add-operators.js) - Backtracking + Previous/Current + In-place calculation
 
 ## Heap / Priority Queue
 
