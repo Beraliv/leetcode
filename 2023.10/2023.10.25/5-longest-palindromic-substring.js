@@ -71,6 +71,10 @@ class Palindrome {
  * @return {string}
  */
 var longestPalindrome = function (s) {
+  // Solution: 1 Iteration + 2 pointers (expand from possible centres)
+  // Time: O(N ^ 2)
+  // Space: O(1)
+
   let palindrome = new Palindrome(0, 0);
 
   for (let i = 0; i < s.length; i++) {
@@ -78,7 +82,7 @@ var longestPalindrome = function (s) {
 
     if (oddSize > palindrome.length) {
       const halfSize = (oddSize - 1) / 2;
-      palindrome = new Palindrome(i - halfSize, i + halfSize);
+      palindrome = [i - halfSize, i + halfSize];
     }
 
     const evenSize = expand(i, i + 1, s);

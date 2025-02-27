@@ -47,6 +47,8 @@
 - [408. Valid Word Abbreviation](/2023.11/2023.11.23/408-valid-word-abbreviation.js) - 2 pointers
 - [986. Interval List Intersections](/2023.12/2023.12.08/986-interval-list-intersections.js) - 2 pointers
 - [88. Merge Sorted Array](/2025.02/2025.02.09/88-merge-sorted-array.js) - 2 Pointers
+- [5. Longest Palindromic Substring](/2023.10/2023.10.25/5-longest-palindromic-substring.js) - 1 Iteration + 2 pointers (expand from all possible centres)
+- [647. Palindromic Substrings](/2025.02/2025.02.27/647-palindromic-substrings.js) - 1 Iteration + 2 pointers (expand from all possible centres)
 
 ## Sliding Window
 
