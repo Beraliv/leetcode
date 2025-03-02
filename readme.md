@@ -155,7 +155,8 @@ Kahn's algorithm
 ## Dynamic Programming
 
 - [139. Word Break](/2025.02/2025.02.18/139-word-break.js) - Backtracking + HashSet, or BFS + Queue + 2 HashSets (Dictionary + Visited), or DP (TODO)
-- [516. Longest Palindromic Subsequence](/2025.02/2025.02.28/516-longest-palindromic-subsequence.js) - 2D DP
-- [1062. Longest Repeating Substring](/2025.02/2025.02.28/1062-longest-repeating-substring.js) - 2D DP
+- [516. Longest Palindromic Subsequence](/2025.02/2025.02.28/516-longest-palindromic-subsequence.js) - Bottom-Up DP + 2D Memo (Memoisation)
+- [1062. Longest Repeating Substring](/2025.02/2025.02.28/1062-longest-repeating-substring.js) - Bottom-Up DP + 2D Memo
 - [1092. Shortest Common Supersequence](/2025.02/2025.02.28/1092-shortest-common-supersequence.js) - 2D DP + Backtracking (Restoring path) + 2 Pointers (Revert Array)
-- [1143. Longest Common Subsequence](/2025.02/2025.02.28/1143-longest-common-subsequence.js) - 2D DP
+- [1143. Longest Common Subsequence](/2025.02/2025.02.28/1143-longest-common-subsequence.js) - Bottom-Up DP + 2D Memo
+- [3469. Find Minimum Cost to Remove Array Elements](/2025.03/2025.03.02/3469-find-minimum-cost-to-remove-array-elements.js) - Top-Down DP + 2D Memo
