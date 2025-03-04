@@ -115,6 +115,7 @@
 - [129. Sum Root to Leaf Numbers](/2023.12/2023.12.28/129-sum-root-to-leaf-numbers.js) - DFS, or BFS, or Morris traversal (next node mutation)
 - [889. Construct Binary Tree from Preorder and Postorder Traversal](/2025.02/2025.02.23/889-construct-binary-tree-from-preorder-and-postorder-traversal.js) - DFS
 - [2467. Most Profitable Path in a Tree](/2025.02/2025.02.24/2467-most-profitable-path-in-a-tree.js) - 2 DFS (Bob path + Alice path), or 1 DFS (combined)
+- [386. Lexicographical Numbers](/2025.03/2025.03.03/386-lexicographical-numbers.js) - Sort Array, or Array + DFS, or Array + Iterative DFS
 
 ## BFS
 
