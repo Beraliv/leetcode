@@ -116,6 +116,7 @@
 - [889. Construct Binary Tree from Preorder and Postorder Traversal](/2025.02/2025.02.23/889-construct-binary-tree-from-preorder-and-postorder-traversal.js) - DFS
 - [2467. Most Profitable Path in a Tree](/2025.02/2025.02.24/2467-most-profitable-path-in-a-tree.js) - 2 DFS (Bob path + Alice path), or 1 DFS (combined)
 - [386. Lexicographical Numbers](/2025.03/2025.03.03/386-lexicographical-numbers.js) - Sort Array, or Array + DFS, or Array + Iterative DFS
+- [1274. Number of Ships in a Rectangle](/2025.03/2025.03.06/1274-number-of-ships-in-a-rectangle.js) - Divide and Conquer
 
 ## BFS
 
@@ -161,3 +162,8 @@ Kahn's algorithm
 - [1092. Shortest Common Supersequence](/2025.02/2025.02.28/1092-shortest-common-supersequence.js) - 2D DP + Backtracking (Restoring path) + 2 Pointers (Revert Array)
 - [1143. Longest Common Subsequence](/2025.02/2025.02.28/1143-longest-common-subsequence.js) - Bottom-Up DP + 2D Memo
 - [3469. Find Minimum Cost to Remove Array Elements](/2025.03/2025.03.02/3469-find-minimum-cost-to-remove-array-elements.js) - Top-Down DP + 2D Memo
+
+## Math
+
+- [2579. Count Total Number of Colored Cells](/2025.03/2025.03.05/2579-count-total-number-of-colored-cells.js) - Geometrical formula
+- [2965. Find Missing and Repeated Values](/2025.03/2025.03.06/2965-find-missing-and-repeated-values.js) - 2 formulae (Sum of numbers and sum of squares)
