@@ -167,3 +167,4 @@ Kahn's algorithm
 
 - [2579. Count Total Number of Colored Cells](/2025.03/2025.03.05/2579-count-total-number-of-colored-cells.js) - Geometrical formula
 - [2965. Find Missing and Repeated Values](/2025.03/2025.03.06/2965-find-missing-and-repeated-values.js) - 2 formulae (Sum of numbers and sum of squares)
+- [2523. Closest Prime Numbers in Range](/2025.03/2025.03.07/2523-closest-prime-numbers-in-range.js) - Iteration from 3 to Square Root + Check prev prime distance
