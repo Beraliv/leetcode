@@ -53,6 +53,7 @@
 ## Sliding Window
 
 - [1004. Max Consecutive Ones III](/2023.12/2023.12.04/1004-max-consecutive-ones-iii.js) - Sliding Window
+- [2379. Minimum Recolors to Get K Consecutive Black Blocks](/2025.03/2025.03.08/2379-minimum-recolors-to-get-k-consecutive-black-blocks.js) - Sliding Window
 
 ## Stack
 
