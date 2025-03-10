@@ -54,8 +54,11 @@ var lexicalOrder = function (n) {
     if (current * 10 <= n) {
       current *= 10;
     } else {
-      while (current % 10 === 9 || current >= n) {
-        current = (current - (current % 10)) / 10;
+      // number = 394, n = 394, 394 => 4
+      // number = 399, n = 500, 399 => 4
+      while (current % 10 === 9 || current === n) {
+        const remainder = current % 10;
+        current = (current - remainder) / 10;
       }
       current++;
     }

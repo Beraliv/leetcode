@@ -55,6 +55,11 @@
 - [1004. Max Consecutive Ones III](/2023.12/2023.12.04/1004-max-consecutive-ones-iii.js) - Sliding Window
 - [2379. Minimum Recolors to Get K Consecutive Black Blocks](/2025.03/2025.03.08/2379-minimum-recolors-to-get-k-consecutive-black-blocks.js) - Sliding Window
 - [3208. Alternating Groups II](/2025.03/2025.03.09/3208-alternating-groups-ii.js) - Sliding Window + 1 Pass
+- [3306. Count of Substrings Containing Every Vowel and K Consonants II](/2025.03/2025.03.10/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.js) - 2 Pass + Sliding Window + Looser Conditions
+
+## Greedy
+
+- [1029. Two City Scheduling](/2025.03/2025.03.10/1029-two-city-scheduling.js) - Greedy + (A[0] - A[1] - (B[0] - B[1]))
 
 ## Stack
 
