@@ -56,6 +56,7 @@
 - [2379. Minimum Recolors to Get K Consecutive Black Blocks](/2025.03/2025.03.08/2379-minimum-recolors-to-get-k-consecutive-black-blocks.js) - Sliding Window
 - [3208. Alternating Groups II](/2025.03/2025.03.09/3208-alternating-groups-ii.js) - Sliding Window + 1 Pass
 - [3306. Count of Substrings Containing Every Vowel and K Consonants II](/2025.03/2025.03.10/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.js) - 2 Pass + Sliding Window + Looser Conditions
+- [1358. Number of Substrings Containing All Three Characters](/2025.03/2025.03.11/1358-number-of-substrings-containing-all-three-characters.js) - Sliding Window
 
 ## Greedy
 
