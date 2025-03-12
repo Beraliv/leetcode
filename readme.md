@@ -91,6 +91,7 @@
 - [528. Random Pick with Weight](2023.11/2023.11.06/528-random-pick-with-weight.js) - Sorted Array + Binary Search (-1, <=, -1/+1, middle)
 - [162. Find Peak Element](/2023.11/2023.11.19/162-find-peak-element.js) - Binary Search (-1, <, -1/+1, middle/start)
 - [644. Maximum Average Subarray II](/2025.02/2025.02.18/644-maximum-average-subarray-ii.js) - Binary Search (Float, min/max, >= EPS, 0/0, (start+end)/2)
+- [2529. Maximum Count of Positive Integer and Negative Integer](/2025.03/2025.03.12/2529-maximum-count-of-positive-integer-and-negative-integer.js) - Lower Bound + Upper Bound
 
 ## LinkedList
 
