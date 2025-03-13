@@ -49,6 +49,7 @@
 - [88. Merge Sorted Array](/2025.02/2025.02.09/88-merge-sorted-array.js) - 2 Pointers
 - [5. Longest Palindromic Substring](/2023.10/2023.10.25/5-longest-palindromic-substring.js) - 1 Iteration + 2 pointers (expand from all possible centres)
 - [647. Palindromic Substrings](/2025.02/2025.02.27/647-palindromic-substrings.js) - 1 Iteration + 2 pointers (expand from all possible centres)
+- [3356. Zero Array Transformation II](/2025.03/2025.03.13/3356-zero-array-transformation-ii.js) - Binary Search, or 2 Pointers + Linear Sweeping
 
 ## Sliding Window
 
@@ -84,7 +85,7 @@
 - [153. Find Minimum in Rotated Sorted Array](/2023.11/2023.11.15/153-find-minimum-in-rotated-sorted-array.js) - Binary Search (-1, <=, 0/+1, left)
 - [35. Search Insert Position](/2025.02/2025.02.07/35-search-insert-position.js) - Binary Search (-1, <=, -1/+1, middle/left)
 - [33. Search in Rotated Sorted Array](/2023.11/2023.11.15/33-search-in-rotated-sorted-array.js) - 2 Binary searches - shift and value
-- [34. Find First and Last Position of Element in Sorted Array](/2025.02/2025.02.06/34-find-first-and-last-position-of-element-in-sorted-array.js) - 2 Binary searches - left and right bounds
+- [34. Find First and Last Position of Element in Sorted Array](/2025.02/2025.02.06/34-find-first-and-last-position-of-element-in-sorted-array.js) - Lower Bound + Upper Bound
 - [981. Time Based Key-Value Store](/2025.02/2025.02.07/981-time-based-key-value-store.js) - Map + Array + Upper bound
 - [4. Median of Two Sorted Arrays](/2025.02/2025.02.07/4-median-of-two-sorted-arrays.js) - Binary search on smallest array + left/right for 2 array
 - [235. Lowest Common Ancestor of a Binary Search Tree](/2023.12/2023.12.11/235-lowest-common-ancestor-of-a-binary-search-tree.js) - Binary search in BST tree
