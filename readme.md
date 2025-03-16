@@ -95,6 +95,7 @@
 - [2529. Maximum Count of Positive Integer and Negative Integer](/2025.03/2025.03.12/2529-maximum-count-of-positive-integer-and-negative-integer.js) - Lower Bound + Upper Bound
 - [2226. Maximum Candies Allocated to K Children](/2025.03/2025.03.14/2226-maximum-candies-allocated-to-k-children.js) - Binary Search + Counting
 - [2560. House Robber IV](/2025.03/2025.03.15/2560-house-robber-iv.js) - Binary Search + Counting + Skipping
+- [2594. Minimum Time to Repair Cars](/2025.03/2025.03.16/2594-minimum-time-to-repair-cars.js) - Binary Search + Non-overflow middle + Counting
 
 ## LinkedList
 
