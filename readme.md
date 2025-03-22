@@ -167,6 +167,7 @@ Kahn's algorithm
 
 - [210. Course Schedule II](/2023.11/2023.11.13/210-course-schedule-ii.js) - Topological Sort
 - [Course Schedule 4](/2025.01/2025.01.29/1462-course-schedule-iv.js)
+- [2115. Find All Possible Recipes from Given Supplies](/2025.03/2025.03.22/2115-find-all-possible-recipes-from-given-supplies.js) - Hybrid Topological Sort (where verticals = recipes + supplies, and edges = all available ingredients across all recipes)
 
 ## Dynamic Programming
 
