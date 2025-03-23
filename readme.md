@@ -160,6 +160,7 @@
 - [2349. Design a Number Container System](/2025.02/2025.02.08/2349-design-a-number-container-system.js) - 2 Maps + MinHeap + dequeue (when index doesn't match number)
 - [215. Kth Largest Element in an Array](/2023.11/2023.11.11/215-kth-largest-element-in-an-array.js) - MinHeap + first element
 - [973. K Closest Points to Origin](/2023.11/2023.11.19/973-k-closest-points-to-origin.js) - MaxHeap
+- [1976. Number of Ways to Arrive at Destination](/2025.03/2025.03.23/1976-number-of-ways-to-arrive-at-destination.js) - Dijkstra (aka Adjacency List + MinHeap)
 
 ## Topological sort
 
