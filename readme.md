@@ -59,6 +59,7 @@
 - [3306. Count of Substrings Containing Every Vowel and K Consonants II](/2025.03/2025.03.10/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.js) - 2 Pass + Sliding Window + Looser Conditions
 - [1358. Number of Substrings Containing All Three Characters](/2025.03/2025.03.11/1358-number-of-substrings-containing-all-three-characters.js) - Sliding Window
 - [2401. Longest Nice Subarray](/2025.03/2025.03.17/2401-longest-nice-subarray.js) - Sliding Window + Bitwise Operations (|=, ^=)
+- [1100. Find K-Length Substrings With No Repeated Characters](./2025.03/2025.03.26/1100-find-k-length-substrings-with-no-repeated-characters.js) - Sliding Window + Array, or Sliding Window + Bitwise Operations (|=, ^=)
 
 ## Greedy
 
