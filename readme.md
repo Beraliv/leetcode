@@ -181,6 +181,7 @@ Kahn's algorithm
 - [1092. Shortest Common Supersequence](/2025.02/2025.02.28/1092-shortest-common-supersequence.js) - 2D DP + Backtracking (Restoring path) + 2 Pointers (Revert Array)
 - [1143. Longest Common Subsequence](/2025.02/2025.02.28/1143-longest-common-subsequence.js) - Bottom-Up DP + 2D Memo
 - [3469. Find Minimum Cost to Remove Array Elements](/2025.03/2025.03.02/3469-find-minimum-cost-to-remove-array-elements.js) - Top-Down DP + 2D Memo
+- [2140. Solving Questions With Brainpower](/2025.04/2025.04.01/2140-solving-questions-with-brainpower.js) - 1D DP
 
 ## Math
 
