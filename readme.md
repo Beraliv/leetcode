@@ -65,6 +65,7 @@
 ## Greedy
 
 - [1029. Two City Scheduling](/2025.03/2025.03.10/1029-two-city-scheduling.js) - Greedy + (A[0] - A[1] - (B[0] - B[1]))
+- [2873. Maximum Value of an Ordered Triplet I](/2025.04/2025.04.02/2873-maximum-value-of-an-ordered-triplet-i.js) - Greedy + 3 Params
 
 ## Stack
 
