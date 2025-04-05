@@ -3,7 +3,7 @@
  * @return {number}
  */
 var minOperations = function (nums) {
-  // Solution: Greedy + Iteration + Bit Manipulation
+  // Solution: Greedy + Iteration + Bits Manipulation
   // Time: O(N)
   // Space: O(1)
 

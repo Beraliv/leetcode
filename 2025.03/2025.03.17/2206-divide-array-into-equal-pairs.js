@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var divideArray = function (nums) {
-  // Bit Manipulation won't work since [1,2,4,7] is false
+  // Bits Manipulation won't work since [1,2,4,7] is false
   // 001, 010, 100, 111
 
   // Solution: HashSet

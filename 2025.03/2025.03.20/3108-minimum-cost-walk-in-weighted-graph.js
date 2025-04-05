@@ -7,7 +7,7 @@ import { Queue } from "@datastructures-js/queue";
  * @return {number[]}
  */
 var minimumCost = function (n, edges, query) {
-  // Solution: BFS + Connected Components + Bit Manipulation
+  // Solution: BFS + Connected Components + Bits Manipulation
   // Time: O(N + E + Q)
   // Space: O(N + E)
 
