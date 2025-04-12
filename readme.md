@@ -191,6 +191,7 @@ Kahn's algorithm
 - [2965. Find Missing and Repeated Values](/2025.03/2025.03.06/2965-find-missing-and-repeated-values.js) - 2 formulae (Sum of numbers and sum of squares)
 - [2523. Closest Prime Numbers in Range](/2025.03/2025.03.07/2523-closest-prime-numbers-in-range.js) - Iteration from 3 to Square Root + Check prev prime distance
 - [2999. Count the Number of Powerful Integers](/2025.04/2025.04.10/2999-count-the-number-of-powerful-integers.js)
+- [3272. Find the Count of Good Integers](/2025.04/2025.04.12/3272-find-the-count-of-good-integers.js) - Enumeration + Permutations + Combinatorics
 
 ## Bits Manipulation
 
