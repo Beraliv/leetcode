@@ -4,6 +4,10 @@
  * @return {number}
  */
 var myPow = function (x, n) {
+  // Solution: Quick Exponentiation
+  // Time: O(logN)
+  // Space: O(1)
+
   let sign = Math.sign(n);
   n = Math.abs(n);
 
