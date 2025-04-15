@@ -197,3 +197,8 @@ Kahn's algorithm
 
 - [1863. Sum of All Subset XOR Totals](/2025.04/2025.04.05/1863-sum-of-all-subset-xor-totals.js) - Or Bitwise + Shift
 - [3191. Minimum Operations to Make Binary Array Elements Equal to One I](/2025.03/2025.03.18/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i.js) - Greedy + Iteration + Xor Bitwise
+
+## Binary Index Tree, or BIT
+
+- [2179. Count Good Triplets in an Array](/2025.04/2025.04.15/2179-count-good-triplets-in-an-array.js) - Reversed Index Mapping + BIT
+- [315. Count of Smaller Numbers After Self](/2025.04/2025.04.15/315-count-of-smaller-numbers-after-self.js) - Reversed Index Mapping + BIT
