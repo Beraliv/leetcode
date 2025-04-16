@@ -51,6 +51,7 @@
 - [647. Palindromic Substrings](/2025.02/2025.02.27/647-palindromic-substrings.js) - 1 Iteration + 2 pointers (expand from all possible centres)
 - [3356. Zero Array Transformation II](/2025.03/2025.03.13/3356-zero-array-transformation-ii.js) - Binary Search, or 2 Pointers + Linear Sweeping
 - [763. Partition Labels](/2025.03/2025.03.30/763-partition-labels.js) - Last Character Index Array + 2 Pointers
+- [2537. Count the Number of Good Subarrays](/2025.04/2025.04.16/2537-count-the-number-of-good-subarrays.js) - HashMap + 2 Pointers
 
 ## Sliding Window
 
