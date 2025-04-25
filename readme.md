@@ -13,6 +13,7 @@
 - [49. Group Anagrams](/2025.01/2025.01.29/49-group-anagrams.js) - HashMap + Sort
 - [1396. Design Underground System](/2025.02/2025.02.02/1396-design-underground-system.js) - HashMap
 - [3160. Find the Number of Distinct Colors Among the Balls](/2025.02/2025.02.07/3160-find-the-number-of-distinct-colors-among-the-balls.js) - 2 HashMaps (ball-color and color-ball pairs)
+- [2845. Count of Interesting Subarrays](/2025.04/2025.04.25/2845-count-of-interesting-subarrays.js) - HashMap + Prefix Sum
 
 **Arrays**
 
