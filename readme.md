@@ -54,6 +54,8 @@
 - [763. Partition Labels](/2025.03/2025.03.30/763-partition-labels.js) - Last Character Index Array + 2 Pointers
 - [2537. Count the Number of Good Subarrays](/2025.04/2025.04.16/2537-count-the-number-of-good-subarrays.js) - HashMap + 2 Pointers
 - [2563. Count the Number of Fair Pairs](/2025.04/2025.04.19/2563-count-the-number-of-fair-pairs.js) - Sort + 2 Pointers (Lower + Upper bounds)
+- [930. Binary Subarrays With Sum](/2025.04/2025.04.28/930-binary-subarrays-with-sum.js) - Leading Zeros Skipping + 2 Pointers + Counting
+- [2302. Count Subarrays With Score Less Than K](/2025.04/2025.04.28/2302-count-subarrays-with-score-less-than-k.js) - 2 Pointers + Counting
 
 ## Sliding Window
 
