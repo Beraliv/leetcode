@@ -105,6 +105,7 @@
 - [2226. Maximum Candies Allocated to K Children](/2025.03/2025.03.14/2226-maximum-candies-allocated-to-k-children.js) - Binary Search + Counting
 - [2560. House Robber IV](/2025.03/2025.03.15/2560-house-robber-iv.js) - Binary Search + Counting + Skipping
 - [2594. Minimum Time to Repair Cars](/2025.03/2025.03.16/2594-minimum-time-to-repair-cars.js) - Binary Search + Non-overflow middle + Counting
+- [2071. Maximum Number of Tasks You Can Assign](/2025.05/2025.05.01/2071-maximum-number-of-tasks-you-can-assign.js) - Binary Search + Deque
 
 ## LinkedList
 
