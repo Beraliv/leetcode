@@ -198,6 +198,7 @@ Kahn's algorithm
 - [2523. Closest Prime Numbers in Range](/2025.03/2025.03.07/2523-closest-prime-numbers-in-range.js) - Iteration from 3 to Square Root + Check prev prime distance
 - [2999. Count the Number of Powerful Integers](/2025.04/2025.04.10/2999-count-the-number-of-powerful-integers.js)
 - [3272. Find the Count of Good Integers](/2025.04/2025.04.12/3272-find-the-count-of-good-integers.js) - Enumeration + Permutations + Combinatorics
+- [790. Domino and Tromino Tiling](/2025.05/2025.05.05/790-domino-and-tromino-tiling.js) - Recurrent formula + 1D DP, or Recurrent formula + 3 values
 
 ## Bits Manipulation
 
