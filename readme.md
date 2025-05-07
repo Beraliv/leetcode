@@ -140,6 +140,7 @@
 - [2467. Most Profitable Path in a Tree](/2025.02/2025.02.24/2467-most-profitable-path-in-a-tree.js) - 2 DFS (Bob path + Alice path), or 1 DFS (combined)
 - [386. Lexicographical Numbers](/2025.03/2025.03.03/386-lexicographical-numbers.js) - Sort Array, or Array + DFS, or Array + Iterative DFS
 - [1274. Number of Ships in a Rectangle](/2025.03/2025.03.06/1274-number-of-ships-in-a-rectangle.js) - Divide and Conquer
+- [3341. Find Minimum Time to Reach Last Room I](/2025.05/2025.05.07/3341-find-minimum-time-to-reach-last-room-i.js) - 2D DP + DFS
 
 ## BFS
 
