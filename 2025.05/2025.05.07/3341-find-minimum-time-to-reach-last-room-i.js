@@ -3,6 +3,10 @@
  * @return {number}
  */
 var minTimeToReach = function (moveTime) {
+  // Solution 1: DFS + Memoization
+  // Time: O(M + N)
+  // Space: O(M * N)
+
   if (moveTime.length === 0) return 0;
 
   const m = moveTime.length;
