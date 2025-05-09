@@ -192,6 +192,7 @@ Kahn's algorithm
 - [3469. Find Minimum Cost to Remove Array Elements](/2025.03/2025.03.02/3469-find-minimum-cost-to-remove-array-elements.js) - Top-Down DP + 2D Memo
 - [2140. Solving Questions With Brainpower](/2025.04/2025.04.01/2140-solving-questions-with-brainpower.js) - 1D DP
 - [416. Partition Equal Subset Sum](/2025.04/2025.04.07/416-partition-equal-subset-sum.js) - O/1 Knapsack + 2D DP, or O/1 Knapsack + Bitmask DP
+- [3343. Count Number of Balanced Permutations](/2025.05/2025.05.09/3343-count-number-of-balanced-permutations.js) - Bottom-up 2D DP + Combinatorics, or Top-down 2D DP + DFS + Combinatorics
 
 ## Math
 
