@@ -61,8 +61,8 @@ var colorTheGrid = function (m, n) {
   }
 
   let result = 0;
-  for (const num of Object.values(countObj)) {
-    result = (result + num) % MOD;
+  for (const count of Object.values(countObj)) {
+    result = (result + count) % MOD;
   }
   return result;
 };
