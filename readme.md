@@ -205,6 +205,7 @@ Kahn's algorithm
 - [3272. Find the Count of Good Integers](/2025.04/2025.04.12/3272-find-the-count-of-good-integers.js) - Enumeration + Permutations + Combinatorics
 - [790. Domino and Tromino Tiling](/2025.05/2025.05.05/790-domino-and-tromino-tiling.js) - Recurrent formula + 1D DP, or Recurrent formula + 3 values
 - [3337. Total Characters in String After Transformations II](/2025.05/2025.05.14/3337-total-characters-in-string-after-transformations-ii.js) - Matrix Quick Multiplication
+- [2894. Divisible and Non-divisible Sums Difference](/2025.05/2025.05.27/2894-divisible-and-non-divisible-sums-difference.js) - 2 Progressions
 
 ## Bits Manipulation
 
