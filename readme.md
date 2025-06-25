@@ -108,6 +108,7 @@
 - [2560. House Robber IV](/2025.03/2025.03.15/2560-house-robber-iv.js) - Binary Search + Counting + Skipping
 - [2594. Minimum Time to Repair Cars](/2025.03/2025.03.16/2594-minimum-time-to-repair-cars.js) - Binary Search + Non-overflow middle + Counting
 - [2071. Maximum Number of Tasks You Can Assign](/2025.05/2025.05.01/2071-maximum-number-of-tasks-you-can-assign.js) - Binary Search + Deque
+- [2040. Kth Smallest Product of Two Sorted Arrays](/2025.06/2025.06.25/2040-kth-smallest-product-of-two-sorted-arrays.js) - 2 Binary Searches (Range and 2nd Array)
 
 ## LinkedList
 
