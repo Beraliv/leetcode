@@ -72,7 +72,8 @@
 
 - [1029. Two City Scheduling](/2025.03/2025.03.10/1029-two-city-scheduling.js) - Greedy + (A[0] - A[1] - (B[0] - B[1]))
 - [2873. Maximum Value of an Ordered Triplet I](/2025.04/2025.04.02/2873-maximum-value-of-an-ordered-triplet-i.js) - Greedy + 3 Params
-- [2434. Using a Robot to Print the Lexicographically Smallest String](/2025.06/2025.06.06/2434-using-a-robot-to-print-the-lexicographically-smallest-string.js) + Stack + Array + Greedy
+- [2434. Using a Robot to Print the Lexicographically Smallest String](/2025.06/2025.06.06/2434-using-a-robot-to-print-the-lexicographically-smallest-string.js) - Stack + Array + Greedy
+- [2311. Longest Binary Subsequence Less Than or Equal to K](/2025.06/2025.06.26/2311-longest-binary-subsequence-less-than-or-equal-to-k.js) - RTL Iteration + Greedy
 
 ## Stack
 
