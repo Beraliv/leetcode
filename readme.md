@@ -156,6 +156,7 @@
 - [314. Binary Tree Vertical Order Traversal](/2023.11/2023.11.21/314-binary-tree-vertical-order-traversal.js) - BFS + Queue (left to right)
 - [1091. Shortest Path in Binary Matrix](/2023.11/2023.11.20/1091-shortest-path-in-binary-matrix.js) - Queue + Visited 2D Array
 - [987. Vertical Order Traversal of a Binary Tree](/2023.11/2023.11.26/987-vertical-order-traversal-of-a-binary-tree.js) - BFS + Local Sort
+- [2014. Longest Subsequence Repeated k Times](/2025.06/2025.06.27/2014-longest-subsequence-repeated-k-times.js) - ZA Sort + BFS + Queue
 
 ## Tree (rest)
 
