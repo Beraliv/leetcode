@@ -178,6 +178,7 @@
 - [1976. Number of Ways to Arrive at Destination](/2025.03/2025.03.23/1976-number-of-ways-to-arrive-at-destination.js) - Dijkstra (aka Adjacency List + MinHeap)
 - [2503. Maximum Number of Points From Grid Queries](/2025.03/2025.03.28/2503-maximum-number-of-points-from-grid-queries.js) - Array Cache + MinHeap + BFS
 - [3342. Find Minimum Time to Reach Last Room II](/2025.05/2025.05.08/3342-find-minimum-time-to-reach-last-room-ii.js) - BFS + Priority Queue + Dijkstra
+- [2099. Find Subsequence of Length K With the Largest Sum](/2025.06/2025.06.28/2099-find-subsequence-of-length-k-with-the-largest-sum.js) - Min Heap + Sort
 
 ## Topological sort
 
