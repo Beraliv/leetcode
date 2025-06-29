@@ -57,6 +57,7 @@
 - [930. Binary Subarrays With Sum](/2025.04/2025.04.28/930-binary-subarrays-with-sum.js) - Leading Zeros Skipping + 2 Pointers + Counting
 - [2302. Count Subarrays With Score Less Than K](/2025.04/2025.04.28/2302-count-subarrays-with-score-less-than-k.js) - 2 Pointers + Counting
 - [3403. Find the Lexicographically Largest String From the Box I](/2025.06/2025.06.04/3403-find-the-lexicographically-largest-string-from-the-box-i.js) - 2 Pointers
+- [1498. Number of Subsequences That Satisfy the Given Sum Condition](/2025.06/2025.06.29/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.js) - Quick Power (cached) + Sort + 2 Pointers
 
 ## Sliding Window
 
