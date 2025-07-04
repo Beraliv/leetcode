@@ -4,7 +4,7 @@
  */
 var kthCharacter = function (k) {
   // Solution: Binary Search + Count
-  // Time: O(logN)
+  // Time: O(logK)
   // Space: O(1)
 
   let n = 256;
